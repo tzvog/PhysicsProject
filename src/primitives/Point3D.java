@@ -8,7 +8,7 @@ import java.lang.*;
 public class Point3D {
 
     /* Static variable declaration */
-    static Point3D ZERO = new Point3D(0, 0, 0);
+    public static Point3D ZERO = new Point3D(0, 0, 0);
 
     /* local variable declaration */
     private Coordinate _firstCoordinate;
@@ -83,7 +83,7 @@ public class Point3D {
      * @param other the other point we are working with
      * @return a new vector with the two points
      */
-    Vector subtract(Point3D other) {
+    public Vector subtract(Point3D other) {
 
         return new Vector((this.get_firstCoordinate().get() - other.get_firstCoordinate().get()),
                 (this.get_secondCoordinate().get() - other.get_secondCoordinate().get()),
@@ -94,7 +94,7 @@ public class Point3D {
      * creates a new point3D using a Vector
      * @return a new Point3D moved by the vector
      */
-    Point3D add(Vector vec) {
+    public Point3D add(Vector vec) {
 
         return new Point3D((this.get_firstCoordinate().get() + vec.get_point().get_firstCoordinate().get()),
                 (this.get_secondCoordinate().get() + vec.get_point().get_secondCoordinate().get()),
@@ -106,7 +106,7 @@ public class Point3D {
      * @param other the other point
      * @return the distance
      */
-    double distanceSquared(Point3D other)
+    public double distanceSquared(Point3D other)
     {
         return  (((this.get_firstCoordinate().get() - other.get_firstCoordinate().get()) *
                  (this.get_firstCoordinate().get() - other.get_firstCoordinate().get()))  +
@@ -122,7 +122,7 @@ public class Point3D {
      * @param other the other point
      * @return the distance
      */
-    double distance(Point3D other)
+    public double distance(Point3D other)
     {
       return Math.sqrt(distanceSquared(other));
     }

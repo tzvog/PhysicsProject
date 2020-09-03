@@ -73,7 +73,7 @@ public class Vector {
      * @param other the other vector
      * @return the new vector
      */
-    Vector add(Vector other) {
+    public Vector add(Vector other) {
         return new Vector((this.get_point().get_firstCoordinate().get() +
                         other.get_point().get_firstCoordinate().get()),
                         (this.get_point().get_secondCoordinate().get() +
@@ -87,7 +87,7 @@ public class Vector {
      * @param other the other vector
      * @return the new subtracted vector
      */
-    Vector subtract(Vector other){
+    public Vector subtract(Vector other){
         return new Vector((this.get_point().get_firstCoordinate().get() -
                         other.get_point().get_firstCoordinate().get()),
                         (this.get_point().get_secondCoordinate().get() -
@@ -101,7 +101,7 @@ public class Vector {
      * @param scalar the scalar
      * @return the new scaled vector
      */
-    Vector scale(double scalar){
+    public Vector scale(double scalar){
         return new Vector((scalar * this.get_point().get_firstCoordinate().get()),
                 (scalar * this.get_point().get_secondCoordinate().get()),
                 (scalar * this.get_point().get_thirdCoordinate().get()));
@@ -112,7 +112,7 @@ public class Vector {
      * @param other the other vector to use for a dot product
      * @return the dot product
      */
-    double dotProduct(Vector other){
+    public double dotProduct(Vector other){
         return ((this.get_point().get_firstCoordinate().get() *
                 other.get_point().get_firstCoordinate().get()) +
                 (this.get_point().get_secondCoordinate().get() *
@@ -126,7 +126,7 @@ public class Vector {
      * @param other the other vector to create a cross product with
      * @return the new vector
      */
-    Vector crossProduct(Vector other){
+    public Vector crossProduct(Vector other){
         return new Vector((this.get_point().get_firstCoordinate().get() *
                         other.get_point().get_firstCoordinate().get()),
                         (this.get_point().get_secondCoordinate().get() *
@@ -139,7 +139,7 @@ public class Vector {
      * gets the length squared of the vector
      * @return the length squared
      */
-    double lengthSquared(){
+    public double lengthSquared(){
         return this.get_point().distanceSquared(Point3D.ZERO);
     }
 
@@ -147,7 +147,7 @@ public class Vector {
      * gets the distance from the axis base
      * @return the length of the vector
      */
-    double length(){
+    public double length(){
         return this.get_point().distance(Point3D.ZERO);
     }
 
@@ -155,7 +155,7 @@ public class Vector {
      * a function to normalize our vector
      * @return this vector
      */
-    Vector normalize(){
+    public Vector normalize(){
 
         // finds what to multiply the vector by
         double scalar = (1 / Math.sqrt(dotProduct(this)));
@@ -172,7 +172,7 @@ public class Vector {
      * a function to copy our vector and normalize it
      * @return the new normalized vector
      */
-    Vector normalized(){
+    public Vector normalized(){
 
         // creates a new vector
         Vector newVec = new Vector(this.get_point().get_firstCoordinate(),
