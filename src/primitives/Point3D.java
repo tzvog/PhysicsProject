@@ -1,5 +1,7 @@
 package primitives;
 
+import java.lang.*;
+
 /***
  * a class to represent a point in the space
  */
@@ -94,9 +96,9 @@ public class Point3D {
      */
     Point3D add(Vector vec) {
 
-        return new Point3D((this.get_firstCoordinate().get() + vec.getPoint().get_firstCoordinate().get()),
-                (this.get_secondCoordinate().get() + vec.getPoint().get_secondCoordinate().get()),
-                (this.get_thirdCoordinate().get() + vec.getPoint().get_thirdCoordinate().get()));
+        return new Point3D((this.get_firstCoordinate().get() + vec.get_point().get_firstCoordinate().get()),
+                (this.get_secondCoordinate().get() + vec.get_point().get_secondCoordinate().get()),
+                (this.get_thirdCoordinate().get() + vec.get_point().get_thirdCoordinate().get()));
     }
 
     /**
@@ -106,7 +108,7 @@ public class Point3D {
      */
     double distanceSquared(Point3D other)
     {
-        return (((this.get_firstCoordinate().get() - other.get_firstCoordinate().get()) *
+        return  (((this.get_firstCoordinate().get() - other.get_firstCoordinate().get()) *
                  (this.get_firstCoordinate().get() - other.get_firstCoordinate().get()))  +
                 ((this.get_secondCoordinate().get() - other.get_secondCoordinate().get()) *
                  (this.get_secondCoordinate().get() - other.get_secondCoordinate().get())) +
@@ -122,8 +124,7 @@ public class Point3D {
      */
     double distance(Point3D other)
     {
-        double disSquared = distanceSquared(other);
-        return (disSquared * disSquared);
+      return Math.sqrt(distanceSquared(other));
     }
 
     /**
