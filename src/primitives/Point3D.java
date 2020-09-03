@@ -5,11 +5,42 @@ package primitives;
  */
 public class Point3D {
 
+    /* Static variable declaration */
+    private static Point3D ZERO = new Point3D(0, 0, 0);
+
+    /* local variable declaration */
+    private Coordinate firstCoordinate;
+    private Coordinate secondCoordinate;
+    private Coordinate thirdCoordinate;
+
+
+    /* Getters */
+
     /**
-     * a static point to repress the starting axes point
+     * gets the first coordinate
+     * @return the first coordinate
      */
-    private static Point3D ZERO = new Point3D(0,0,0);
-    private Coordinate firstCoordinate, secondCoordinate, thirdCoordinate;
+    public Coordinate getFirstCoordinate() {
+        return firstCoordinate;
+    }
+
+    /**
+     * gets the Second coordinate
+     * @return the Second coordinate
+     */
+    public Coordinate getSecondCoordinate() {
+        return secondCoordinate;
+    }
+
+    /**
+     * gets the third coordinate
+     * @return the third coordinate
+     */
+    public Coordinate getThirdCoordinate() {
+        return thirdCoordinate;
+    }
+
+    /* Constructors */
 
     /***
      * a constructor that receives three Coordinates
@@ -17,8 +48,7 @@ public class Point3D {
      * @param secondCoordinate the second coordinate we receive as y axis
      * @param thirdCoordinate the third coordinate we receive as z axis
      */
-    Point3D(Coordinate firstCoordinate, Coordinate secondCoordinate, Coordinate thirdCoordinate)
-    {
+    public Point3D(Coordinate firstCoordinate, Coordinate secondCoordinate, Coordinate thirdCoordinate) {
         this.firstCoordinate = new Coordinate(firstCoordinate);
         this.secondCoordinate = new Coordinate(secondCoordinate);
         this.thirdCoordinate = new Coordinate(thirdCoordinate);
@@ -30,17 +60,31 @@ public class Point3D {
      * @param yLocation the second double we receive as y axis
      * @param zLocation the third double we receive as x axis
      */
-    Point3D(double xLocation, double yLocation, double zLocation)
-    {
+    public Point3D(double xLocation, double yLocation, double zLocation) {
         this(new Coordinate(xLocation), new Coordinate(yLocation), new Coordinate(zLocation));
     }
 
     /**
      * copy constructor
+     *
      * @param other the Point3D we want to copy
      */
-    Point3D(Point3D other)
-    {
-        this(other.firstCoordinate, other.secondCoordinate, other.thirdCoordinate);
+    public Point3D(Point3D other) {
+        this(other.getFirstCoordinate(), other.getSecondCoordinate(), other.getThirdCoordinate());
+    }
+
+
+    /* Functions */
+
+    /**
+     * creates a vector using another point in the space
+     * @param other the other point we are working with
+     * @return a new vector with the two points
+     */
+    Vector subtract(Point3D other) {
+
+        return new Vector((this.getFirstCoordinate().get() - other.getFirstCoordinate().get()),
+                (this.getSecondCoordinate().get() - other.getSecondCoordinate().get()),
+                (this.getThirdCoordinate().get() - other.getThirdCoordinate().get()));
     }
 }
