@@ -87,4 +87,43 @@ public class Point3D {
                 (this.getSecondCoordinate().get() - other.getSecondCoordinate().get()),
                 (this.getThirdCoordinate().get() - other.getThirdCoordinate().get()));
     }
+
+    /**
+     * creates a new point3D using a Vector
+     * @return a new Point3D moved by the vector
+     */
+    Point3D add(Vector vec) {
+
+        return new Point3D((this.getFirstCoordinate().get() + vec.getPoint().getFirstCoordinate().get()),
+                (this.getSecondCoordinate().get() + vec.getPoint().getSecondCoordinate().get()),
+                (this.getThirdCoordinate().get() + vec.getPoint().getThirdCoordinate().get()));
+    }
+
+    /**
+     * finds the distance between this point and another squared
+     * @param other the other point
+     * @return the distance
+     */
+    double distanceSquared(Point3D other)
+    {
+        return (((this.getFirstCoordinate().get() - other.getFirstCoordinate().get()) *
+                 (this.getFirstCoordinate().get() - other.getFirstCoordinate().get()))  +
+                ((this.getSecondCoordinate().get() - other.getSecondCoordinate().get()) *
+                 (this.getSecondCoordinate().get() - other.getSecondCoordinate().get())) +
+                ((this.getThirdCoordinate().get() - other.getThirdCoordinate().get()) *
+                 (this.getThirdCoordinate().get() - other.getThirdCoordinate().get()))
+        );
+    }
+
+    /**
+     * a function to get the actual distance with another point
+     * @param other the other point
+     * @return the distance
+     */
+    double distance(Point3D other)
+    {
+        double disSquared = distanceSquared(other);
+        return (disSquared * disSquared);
+    }
+
 }

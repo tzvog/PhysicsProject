@@ -5,6 +5,22 @@ package primitives;
  */
 public class Vector {
 
+    /* local variable declaration */
+    private Point3D point;
+
+
+    /* Getters */
+
+    /**
+     * gets the point
+     * @return the point
+     */
+    public Point3D getPoint() {
+        return point;
+    }
+
+    /* Constructors */
+
     /**
      * a constructor that receives three Coordinates
      * @param firstCoordinate the first coordinate we receive as x axis
