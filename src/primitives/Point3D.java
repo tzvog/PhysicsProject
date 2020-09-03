@@ -9,9 +9,9 @@ public class Point3D {
     private static Point3D ZERO = new Point3D(0, 0, 0);
 
     /* local variable declaration */
-    private Coordinate firstCoordinate;
-    private Coordinate secondCoordinate;
-    private Coordinate thirdCoordinate;
+    private Coordinate _firstCoordinate;
+    private Coordinate _secondCoordinate;
+    private Coordinate _thirdCoordinate;
 
 
     /* Getters */
@@ -20,24 +20,24 @@ public class Point3D {
      * gets the first coordinate
      * @return the first coordinate
      */
-    public Coordinate getFirstCoordinate() {
-        return firstCoordinate;
+    public Coordinate get_firstCoordinate() {
+        return _firstCoordinate;
     }
 
     /**
      * gets the Second coordinate
      * @return the Second coordinate
      */
-    public Coordinate getSecondCoordinate() {
-        return secondCoordinate;
+    public Coordinate get_secondCoordinate() {
+        return _secondCoordinate;
     }
 
     /**
      * gets the third coordinate
      * @return the third coordinate
      */
-    public Coordinate getThirdCoordinate() {
-        return thirdCoordinate;
+    public Coordinate get_thirdCoordinate() {
+        return _thirdCoordinate;
     }
 
     /* Constructors */
@@ -49,9 +49,9 @@ public class Point3D {
      * @param thirdCoordinate the third coordinate we receive as z axis
      */
     public Point3D(Coordinate firstCoordinate, Coordinate secondCoordinate, Coordinate thirdCoordinate) {
-        this.firstCoordinate = new Coordinate(firstCoordinate);
-        this.secondCoordinate = new Coordinate(secondCoordinate);
-        this.thirdCoordinate = new Coordinate(thirdCoordinate);
+        this._firstCoordinate = new Coordinate(firstCoordinate);
+        this._secondCoordinate = new Coordinate(secondCoordinate);
+        this._thirdCoordinate = new Coordinate(thirdCoordinate);
     }
 
     /**
@@ -70,7 +70,7 @@ public class Point3D {
      * @param other the Point3D we want to copy
      */
     public Point3D(Point3D other) {
-        this(other.getFirstCoordinate(), other.getSecondCoordinate(), other.getThirdCoordinate());
+        this(other.get_firstCoordinate(), other.get_secondCoordinate(), other.get_thirdCoordinate());
     }
 
 
@@ -83,9 +83,9 @@ public class Point3D {
      */
     Vector subtract(Point3D other) {
 
-        return new Vector((this.getFirstCoordinate().get() - other.getFirstCoordinate().get()),
-                (this.getSecondCoordinate().get() - other.getSecondCoordinate().get()),
-                (this.getThirdCoordinate().get() - other.getThirdCoordinate().get()));
+        return new Vector((this.get_firstCoordinate().get() - other.get_firstCoordinate().get()),
+                (this.get_secondCoordinate().get() - other.get_secondCoordinate().get()),
+                (this.get_thirdCoordinate().get() - other.get_thirdCoordinate().get()));
     }
 
     /**
@@ -94,9 +94,9 @@ public class Point3D {
      */
     Point3D add(Vector vec) {
 
-        return new Point3D((this.getFirstCoordinate().get() + vec.getPoint().getFirstCoordinate().get()),
-                (this.getSecondCoordinate().get() + vec.getPoint().getSecondCoordinate().get()),
-                (this.getThirdCoordinate().get() + vec.getPoint().getThirdCoordinate().get()));
+        return new Point3D((this.get_firstCoordinate().get() + vec.getPoint().get_firstCoordinate().get()),
+                (this.get_secondCoordinate().get() + vec.getPoint().get_secondCoordinate().get()),
+                (this.get_thirdCoordinate().get() + vec.getPoint().get_thirdCoordinate().get()));
     }
 
     /**
@@ -106,12 +106,12 @@ public class Point3D {
      */
     double distanceSquared(Point3D other)
     {
-        return (((this.getFirstCoordinate().get() - other.getFirstCoordinate().get()) *
-                 (this.getFirstCoordinate().get() - other.getFirstCoordinate().get()))  +
-                ((this.getSecondCoordinate().get() - other.getSecondCoordinate().get()) *
-                 (this.getSecondCoordinate().get() - other.getSecondCoordinate().get())) +
-                ((this.getThirdCoordinate().get() - other.getThirdCoordinate().get()) *
-                 (this.getThirdCoordinate().get() - other.getThirdCoordinate().get()))
+        return (((this.get_firstCoordinate().get() - other.get_firstCoordinate().get()) *
+                 (this.get_firstCoordinate().get() - other.get_firstCoordinate().get()))  +
+                ((this.get_secondCoordinate().get() - other.get_secondCoordinate().get()) *
+                 (this.get_secondCoordinate().get() - other.get_secondCoordinate().get())) +
+                ((this.get_thirdCoordinate().get() - other.get_thirdCoordinate().get()) *
+                 (this.get_thirdCoordinate().get() - other.get_thirdCoordinate().get()))
         );
     }
 
@@ -126,4 +126,26 @@ public class Point3D {
         return (disSquared * disSquared);
     }
 
+    /**
+     * checks if two points have the same values
+     * @param obj the other point
+     * @return if they are equal
+     */
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null) return false;
+        if (!(obj instanceof Point3D)) return false;
+        Point3D oth = (Point3D)obj;
+        return _firstCoordinate.equals(oth._firstCoordinate) &&
+                _secondCoordinate.equals(oth._secondCoordinate) &&
+                _thirdCoordinate.equals(oth._thirdCoordinate);
+    }
+
+    @Override
+    public String toString() {
+        return "" + this.get_firstCoordinate() + " " +
+                this.get_secondCoordinate() + " " +
+                this.get_thirdCoordinate();
+    }
 }
