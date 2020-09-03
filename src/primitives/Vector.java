@@ -29,6 +29,11 @@ public class Vector {
      */
     public Vector(Coordinate firstCoordinate, Coordinate secondCoordinate, Coordinate thirdCoordinate) {
 
+        point = new Point3D(firstCoordinate, secondCoordinate, thirdCoordinate);
+
+        if(point.equals(Point3D.ZERO)){
+            throw new IllegalArgumentException();
+        }
     }
 
     /**
@@ -38,7 +43,7 @@ public class Vector {
      * @param zLocation the third double we receive as x axis
      */
     public Vector(double xLocation, double yLocation, double zLocation){
-
+        this(new Coordinate(xLocation), new Coordinate(yLocation), new Coordinate(zLocation));
     }
 
     /**
@@ -47,7 +52,7 @@ public class Vector {
      */
     public Vector(Point3D point)
     {
-
+        this(point.get_firstCoordinate(), point.get_secondCoordinate(), point.get_thirdCoordinate());
     }
 
     /**
@@ -56,6 +61,6 @@ public class Vector {
      */
     public Vector(Vector other)
     {
-
+        this.point = other.point;
     }
 }

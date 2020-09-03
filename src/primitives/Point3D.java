@@ -6,7 +6,7 @@ package primitives;
 public class Point3D {
 
     /* Static variable declaration */
-    private static Point3D ZERO = new Point3D(0, 0, 0);
+    static Point3D ZERO = new Point3D(0, 0, 0);
 
     /* local variable declaration */
     private Coordinate _firstCoordinate;
