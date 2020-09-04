@@ -1,6 +1,7 @@
 package geometries;
 
 import primitives.Point3D;
+import primitives.Ray;
 import primitives.Vector;
 
 /**
@@ -9,8 +10,12 @@ import primitives.Vector;
 public class Tube extends RadialGeometry {
 
     /* local variable declaration */
+    private Ray _axisRay;
 
     /* Getters */
+    public Ray get_axisRay() {
+        return _axisRay;
+    }
 
     /* Constructors */
 

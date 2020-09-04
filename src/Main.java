@@ -11,7 +11,6 @@ public final class Main {
 
     /**
      * Main program to tests initial functionality of the 1st stage
-     * 
      * @param args irrelevant here
      */
     public static void main(String[] args) {
