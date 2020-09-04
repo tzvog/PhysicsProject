@@ -48,4 +48,18 @@ public class Ray {
     public String toString() {
         return "" + this._vec + " " + this._point;
     }
+
+    /**
+     * checks if two points have the same values
+     * @param obj the other point
+     * @return if they are equal
+     */
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null) return false;
+        if (!(obj instanceof Vector)) return false;
+        Ray oth = (Ray) obj;
+        return this._point.equals(oth._point) && this._vec.equals(oth._vec);
+    }
 }
