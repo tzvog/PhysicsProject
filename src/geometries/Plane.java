@@ -64,4 +64,13 @@ public class Plane implements Geometry {
     public Vector getNormal(Point3D point) {
         return null;
     }
+
+    /**
+     * overrides the toString function
+     * @return the object as a string
+     */
+    @Override
+    public String toString() {
+        return "" + this._normal + " " + this._p;
+    }
 }
