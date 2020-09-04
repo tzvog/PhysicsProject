@@ -34,7 +34,7 @@ public class Vector {
         _point = new Point3D(firstCoordinate, secondCoordinate, thirdCoordinate);
 
         if(_point.equals(Point3D.ZERO)){
-            throw new IllegalArgumentException();
+            throw new IllegalArgumentException("Zero Vector");
         }
     }
 
@@ -127,6 +127,14 @@ public class Vector {
      * @return the new vector
      */
     public Vector crossProduct(Vector other){
+
+        //TODO checks the vectors are parallel
+        if(this.normalized().equals(other.normalized()))
+        {
+            throw new IllegalArgumentException("Vectors are parallel");
+        }
+
+
         return new Vector((this.get_point().get_firstCoordinate().get() *
                         other.get_point().get_firstCoordinate().get()),
                         (this.get_point().get_secondCoordinate().get() *
