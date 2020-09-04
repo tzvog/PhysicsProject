@@ -50,7 +50,8 @@ public class Plane implements Geometry {
      * @param vector the vector we want to work with
      */
     public Plane(Point3D point, Vector vector){
-
+        this._p = point;
+        this._normal = vector;
     }
 
     /* Functions */
