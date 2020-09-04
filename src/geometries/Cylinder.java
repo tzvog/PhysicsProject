@@ -18,4 +18,16 @@ public class Cylinder extends Tube {
         return _height;
     }
 
+
+    /* Functions */
+
+    /**
+     * overrides the toString function
+     * @return the toString
+     */
+    @Override
+    public String toString() {
+        return "";
+    }
+
 }

@@ -92,7 +92,8 @@ public class Point3D {
 
     /**
      * creates a new point3D using a Vector
-     * @return a new Point3D moved by the vector
+     * @param vec the vector to do the moving
+     * @return a point moved by the vector
      */
     public Point3D add(Vector vec) {
 
