@@ -128,19 +128,33 @@ public class Vector {
      */
     public Vector crossProduct(Vector other){
 
-        //TODO checks the vectors are parallel
-        if(this.normalized().equals(other.normalized()))
+        if(this.normalized().equals(other.normalized()) ||
+                this.normalized().equals(other.normalized().scale(-1.0)))
         {
             throw new IllegalArgumentException("Vectors are parallel");
         }
 
+//
+//        return new Vector((this.get_point().get_firstCoordinate().get() *
+//                        other.get_point().get_firstCoordinate().get()),
+//                        (this.get_point().get_secondCoordinate().get() *
+//                        other.get_point().get_secondCoordinate().get()),
+//                        (this.get_point().get_thirdCoordinate().get() *
+//                        other.get_point().get_thirdCoordinate().get()));
 
-        return new Vector((this.get_point().get_firstCoordinate().get() *
-                        other.get_point().get_firstCoordinate().get()),
-                        (this.get_point().get_secondCoordinate().get() *
-                        other.get_point().get_secondCoordinate().get()),
-                        (this.get_point().get_thirdCoordinate().get() *
-                        other.get_point().get_thirdCoordinate().get()));
+        return new Vector(
+                (this.get_point().get_secondCoordinate().get() *
+                            other.get_point().get_thirdCoordinate().get()) -
+                            (this.get_point().get_thirdCoordinate().get() *
+                            other.get_point().get_secondCoordinate().get()),
+                            -((this.get_point().get_firstCoordinate().get() *
+                             other.get_point().get_thirdCoordinate().get()) -
+                             (this.get_point().get_thirdCoordinate().get() *
+                             other.get_point().get_firstCoordinate().get())),
+                    (this.get_point().get_firstCoordinate().get() *
+                             other.get_point().get_secondCoordinate().get()) -
+                             (this.get_point().get_secondCoordinate().get() *
+                             other.get_point().get_firstCoordinate().get()));
     }
 
     /***
