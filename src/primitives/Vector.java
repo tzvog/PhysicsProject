@@ -74,12 +74,8 @@ public class Vector {
      * @return the new vector
      */
     public Vector add(Vector other) {
-        return new Vector((this.get_point().get_firstCoordinate().get() +
-                        other.get_point().get_firstCoordinate().get()),
-                        (this.get_point().get_secondCoordinate().get() +
-                        other.get_point().get_secondCoordinate().get()),
-                        (this.get_point().get_thirdCoordinate().get() +
-                        other.get_point().get_thirdCoordinate().get()));
+
+        return new Vector(this._point.add(other));
     }
 
     /**
@@ -94,6 +90,7 @@ public class Vector {
                         other.get_point().get_secondCoordinate().get()),
                         (this.get_point().get_thirdCoordinate().get() -
                         other.get_point().get_thirdCoordinate().get()));
+
     }
 
     /**
