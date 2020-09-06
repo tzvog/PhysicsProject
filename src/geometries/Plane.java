@@ -42,6 +42,18 @@ public class Plane implements Geometry {
      */
     public Plane(Point3D firstPoint, Point3D secondPoint, Point3D thirdPoint){
 
+        // checks that vectors are not the same
+        if(firstPoint.equals(secondPoint) || firstPoint.equals(thirdPoint))
+        {
+            throw new IllegalArgumentException("two of the same vector");
+        }
+
+        Vector v1 = firstPoint.subtract(secondPoint);
+        Vector v2 = firstPoint.subtract(thirdPoint);
+
+        this._normal = v1.crossProduct(v2).normalize();
+        this._p = new Point3D(firstPoint);
+
     }
 
     /**

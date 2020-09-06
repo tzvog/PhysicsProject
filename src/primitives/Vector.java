@@ -134,14 +134,7 @@ public class Vector {
             throw new IllegalArgumentException("Vectors are parallel");
         }
 
-//
-//        return new Vector((this.get_point().get_firstCoordinate().get() *
-//                        other.get_point().get_firstCoordinate().get()),
-//                        (this.get_point().get_secondCoordinate().get() *
-//                        other.get_point().get_secondCoordinate().get()),
-//                        (this.get_point().get_thirdCoordinate().get() *
-//                        other.get_point().get_thirdCoordinate().get()));
-
+        // creates a new cross product vector
         return new Vector(
                 (this.get_point().get_secondCoordinate().get() *
                             other.get_point().get_thirdCoordinate().get()) -

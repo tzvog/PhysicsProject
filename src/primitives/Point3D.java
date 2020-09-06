@@ -51,9 +51,9 @@ public class Point3D {
      * @param thirdCoordinate the third coordinate we receive as z axis
      */
     public Point3D(Coordinate firstCoordinate, Coordinate secondCoordinate, Coordinate thirdCoordinate) {
-        this._firstCoordinate = new Coordinate(firstCoordinate);
-        this._secondCoordinate = new Coordinate(secondCoordinate);
-        this._thirdCoordinate = new Coordinate(thirdCoordinate);
+        this._firstCoordinate = firstCoordinate;
+        this._secondCoordinate = secondCoordinate;
+        this._thirdCoordinate = thirdCoordinate;
     }
 
     /**
