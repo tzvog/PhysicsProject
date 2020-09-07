@@ -1,68 +1,66 @@
 package unittests;
 
-import org.jboss.arquillian.container.test.api.Deployment;
-import org.jboss.arquillian.junit.Arquillian;
-import org.jboss.shrinkwrap.api.ShrinkWrap;
-import org.jboss.shrinkwrap.api.asset.EmptyAsset;
-import org.jboss.shrinkwrap.api.spec.JavaArchive;
-import org.junit.runner.RunWith;
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-@RunWith(Arquillian.class)
 public class VectorTest {
-    @Deployment
-    public static JavaArchive createDeployment() {
-        return ShrinkWrap.create(JavaArchive.class)
-                .addClass(primitives.Vector.class)
-                .addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml");
+
+    @Before
+    public void setUp() throws Exception {
     }
 
-    @org.junit.Test
+    @After
+    public void tearDown() throws Exception {
+    }
+
+    @Test
     public void get_point() {
     }
 
-    @org.junit.Test
+    @Test
     public void add() {
     }
 
-    @org.junit.Test
+    @Test
     public void subtract() {
     }
 
-    @org.junit.Test
+    @Test
     public void scale() {
     }
 
-    @org.junit.Test
+    @Test
     public void dotProduct() {
     }
 
-    @org.junit.Test
+    @Test
     public void crossProduct() {
     }
 
-    @org.junit.Test
+    @Test
     public void lengthSquared() {
     }
 
-    @org.junit.Test
+    @Test
     public void length() {
     }
 
-    @org.junit.Test
+    @Test
     public void normalize() {
     }
 
-    @org.junit.Test
+    @Test
     public void normalized() {
     }
 
-    @org.junit.Test
+    @Test
     public void equals1() {
     }
 
-    @org.junit.Test
+    @Test
     public void toString1() {
     }
 }
