@@ -1,5 +1,7 @@
 package geometries;
 
+import primitives.Ray;
+
 /**
  * a class to implement a cylinder
  */
@@ -24,9 +26,10 @@ public class Cylinder extends Tube {
      * a constructor for a cylinder
      * @param radius the radius of the cylinder
      */
-    public Cylinder(double radius)
+    public Cylinder(double radius, double height, Ray axis)
     {
-        super(radius);
+        super(radius, axis);
+        this._height = height;
     }
 
 

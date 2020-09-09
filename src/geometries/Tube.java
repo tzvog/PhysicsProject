@@ -22,8 +22,9 @@ public class Tube extends RadialGeometry {
     /**
      * a constructor for the Tube object
      */
-    public Tube(double radius) {
+    public Tube(double radius, Ray axis) {
         super(radius);
+        this._axisRay = axis;
     }
 
 
