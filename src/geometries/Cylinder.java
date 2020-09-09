@@ -18,6 +18,17 @@ public class Cylinder extends Tube {
         return _height;
     }
 
+    /* Constructors */
+
+    /**
+     * a constructor for a cylinder
+     * @param radius the radius of the cylinder
+     */
+    public Cylinder(double radius)
+    {
+        super(radius);
+    }
+
 
     /* Functions */
 

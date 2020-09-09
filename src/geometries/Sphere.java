@@ -6,7 +6,7 @@ import primitives.Vector;
 public class Sphere extends RadialGeometry{
 
     /* local variable declaration */
-    Point3D _center;
+    private Point3D _center;
 
     /* Getters */
 
@@ -24,8 +24,9 @@ public class Sphere extends RadialGeometry{
     /**
      * a constructor for the sphere
      */
-    public Sphere(){
-        super(0.0);
+    public Sphere(Point3D p, double radius){
+        super(radius);
+        this._center = p;
     }
 
 
