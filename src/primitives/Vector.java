@@ -99,6 +99,12 @@ public class Vector {
      * @return the new scaled vector
      */
     public Vector scale(double scalar){
+
+        if(scalar == 0)
+        {
+            throw  new IllegalArgumentException("bad zeo scale");
+        }
+
         return new Vector((scalar * this.get_point().get_firstCoordinate().get()),
                 (scalar * this.get_point().get_secondCoordinate().get()),
                 (scalar * this.get_point().get_thirdCoordinate().get()));
