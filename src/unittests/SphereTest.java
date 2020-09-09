@@ -17,8 +17,4 @@ public class SphereTest {
     @Test
     public void getNormal() {
     }
-
-    @Test
-    public void toString1() {
-    }
 }

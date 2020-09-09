@@ -25,10 +25,6 @@ public class CylinderTest {
     }
 
     @Test
-    public void toString1() {
-    }
-
-    @Test
     public void get_radius() {
     }
 
@@ -36,7 +32,4 @@ public class CylinderTest {
     public void get_height() {
     }
 
-    @Test
-    public void toString2() {
-    }
 }

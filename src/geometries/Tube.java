@@ -22,8 +22,8 @@ public class Tube extends RadialGeometry {
     /**
      * a constructor for the Tube object
      */
-    public Tube() {
-        super(0.0);
+    public Tube(double radius) {
+        super(radius);
     }
 
 

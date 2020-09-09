@@ -28,12 +28,4 @@ public class PlaneTest {
     @Test
     public void get_normal() {
     }
-
-    @Test
-    public void getNormal() {
-    }
-
-    @Test
-    public void toString1() {
-    }
 }
