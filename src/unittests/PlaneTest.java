@@ -13,6 +13,7 @@ package unittests;
 
 import static org.junit.Assert.*;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import geometries.*;
@@ -21,8 +22,18 @@ import primitives.*;
 
 public class PlaneTest {
 
+    Plane p;
+
+    @Before
+    public void setup(){
+        p = new Plane(new Point3D(1,0,0),
+                new Point3D(0,1,0),
+                new Point3D(0,0,1));
+    }
+
     @Test
     public void get_p() {
+        assertEquals(new Point3D(1,0,0), p.get_p());
     }
 
     @Test
