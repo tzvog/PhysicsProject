@@ -4,6 +4,8 @@ import primitives.Point3D;
 import primitives.Ray;
 import primitives.Vector;
 
+import java.util.List;
+
 /**
  * creates a tube object
  */
@@ -30,6 +32,10 @@ public class Tube extends RadialGeometry {
 
     /* Functions */
 
+    @Override
+    public List<Point3D> findIntersections(Ray ray) {
+        return null;
+    }
 
     /**
      * implements the get normal function

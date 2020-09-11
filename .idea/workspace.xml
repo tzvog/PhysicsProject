@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="d8aceace-6a8f-49e0-889d-c538d940ba48" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/unittests/PlaneTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/unittests/PlaneTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/geometries/Geometry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/geometries/Geometry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/geometries/Sphere.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/geometries/Sphere.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/unittests/SphereTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/unittests/SphereTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,31 +24,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/unittests/PlaneTest.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/geometries/Polygon.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="111">
-              <caret line="39" column="30" selection-start-line="39" selection-start-column="30" selection-end-line="39" selection-end-column="30" />
+            <state relative-caret-position="816">
+              <caret line="50" selection-start-line="50" selection-end-line="50" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/geometries/Sphere.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="26" column="33" selection-start-line="26" selection-start-column="33" selection-end-line="26" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#751#752#0" expanded="true" />
-                <element signature="e#781#782#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/geometries/Plane.java">
+        <entry file="file://$PROJECT_DIR$/src/unittests/SphereTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="53" selection-start-line="53" selection-end-line="53" />
+            <state relative-caret-position="221">
+              <caret line="26" column="5" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1765#1766#0" expanded="true" />
-                <element signature="e#1800#1801#0" expanded="true" />
-                <element signature="e#2093#2094#0" expanded="true" />
-                <element signature="e#2149#2150#0" expanded="true" />
+                <element signature="e#382#383#0" expanded="true" />
+                <element signature="e#432#433#0" expanded="true" />
+                <element signature="e#474#475#0" expanded="true" />
+                <element signature="e#538#539#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -71,7 +79,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/geometries/Coordinate.java" />
-        <option value="$PROJECT_DIR$/src/geometries/Geometry.java" />
         <option value="$PROJECT_DIR$/src/geometries/RadialGeometry.java" />
         <option value="$PROJECT_DIR$/src/geometries/Triangle.java" />
         <option value="$PROJECT_DIR$/src/primitives/Coordinate.java" />
@@ -88,13 +95,14 @@
         <option value="$PROJECT_DIR$/src/geometries/SphereTest.java" />
         <option value="$PROJECT_DIR$/src/primitives/Vector.java" />
         <option value="$PROJECT_DIR$/src/unittests/VectorTest.java" />
-        <option value="$PROJECT_DIR$/src/geometries/Sphere.java" />
-        <option value="$PROJECT_DIR$/src/unittests/SphereTest.java" />
         <option value="$PROJECT_DIR$/src/geometries/Tube.java" />
         <option value="$PROJECT_DIR$/src/geometries/Cylinder.java" />
         <option value="$PROJECT_DIR$/src/unittests/TubeTest.java" />
         <option value="$PROJECT_DIR$/src/unittests/CylinderTest.java" />
         <option value="$PROJECT_DIR$/src/unittests/PlaneTest.java" />
+        <option value="$PROJECT_DIR$/src/geometries/Geometry.java" />
+        <option value="$PROJECT_DIR$/src/geometries/Sphere.java" />
+        <option value="$PROJECT_DIR$/src/unittests/SphereTest.java" />
       </list>
     </option>
   </component>
@@ -114,6 +122,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -132,11 +141,16 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="geometries" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="PhysicsProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PhysicsProject" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="unittests" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -300,7 +314,9 @@
       <workItem from="1599403198372" duration="599000" />
       <workItem from="1599407370989" duration="171000" />
       <workItem from="1599418561685" duration="259000" />
-      <workItem from="1599462466217" duration="12497000" />
+      <workItem from="1599462466217" duration="13721000" />
+      <workItem from="1599724955743" duration="17000" />
+      <workItem from="1599728687685" duration="5000" />
     </task>
     <task id="LOCAL-00001" summary="finished point functions">
       <created>1599141910756</created>
@@ -456,13 +472,17 @@
       <option name="project" value="LOCAL" />
       <updated>1599646187742</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="week 2 tests finished">
+      <created>1599646792893</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1599646792893</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="SphereTest_getNormal - 2020.09.09 at 12h 39m 55s.xml">
-      <configuration name="SphereTest.getNormal" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="TubeTest_get_axisRay - 2020.09.09 at 12h 55m 23s.xml">
       <configuration name="TubeTest.get_axisRay" configurationId="JUnit" />
     </history-entry>
@@ -490,15 +510,17 @@
     <history-entry file="PlaneTest_get_normal - 2020.09.09 at 13h 19m 26s.xml">
       <configuration name="PlaneTest.get_normal" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="PlaneTest_get_normal - 2020.09.09 at 13h 19m 35s.xml">
+      <configuration name="PlaneTest.get_normal" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51208000" />
+    <option name="totallyTimeSpent" value="52454000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2728745" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2825911" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -508,7 +530,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3285968" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.94671404" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.44582593" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.44582593" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -588,19 +610,10 @@
     <MESSAGE value="wrote tests for tube" />
     <MESSAGE value="sphere tests" />
     <MESSAGE value="Cylinder tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cylinder tests" />
+    <MESSAGE value="week 2 tests finished" />
+    <option name="LAST_COMMIT_MESSAGE" value="week 2 tests finished" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/geometries/Plane.java</url>
-          <line>53</line>
-          <properties />
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
         <watch expression="vr.length()" language="JAVA" />
@@ -653,20 +666,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/geometries/Geometry.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/geometries/Triangle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="40" selection-start-line="13" selection-start-column="40" selection-end-line="13" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/primitives/Util.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="137">
@@ -684,13 +683,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/geometries/Polygon.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="50" selection-start-line="50" selection-end-line="50" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/geometries/Intersectable.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -705,26 +697,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="87" selection-start-line="87" selection-end-line="87" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/unittests/VectorTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="58">
-          <caret line="42" column="10" selection-start-line="42" selection-start-column="10" selection-end-line="42" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/unittests/SphereTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -784,25 +756,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/geometries/RadialGeometry.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/geometries/Sphere.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="28" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#303#304#0" expanded="true" />
-            <element signature="e#333#334#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/unittests/TubeTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -834,16 +787,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/geometries/Cylinder.java">
+    <entry file="file://$PROJECT_DIR$/src/geometries/Geometry.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="56">
-          <caret line="7" column="33" lean-forward="true" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
+        <state relative-caret-position="187">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/unittests/PlaneTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="362">
+          <caret line="39" column="30" selection-start-line="39" selection-start-column="30" selection-end-line="39" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#751#752#0" expanded="true" />
+            <element signature="e#781#782#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/geometries/Tube.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-216">
+        <state relative-caret-position="17">
           <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -851,16 +816,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/unittests/SphereTest.java">
+    <entry file="file://$PROJECT_DIR$/src/geometries/Triangle.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="436">
-          <caret line="38" column="1" lean-forward="true" selection-start-line="38" selection-start-column="1" selection-end-line="38" selection-end-column="1" />
-          <folding>
-            <element signature="e#382#383#0" expanded="true" />
-            <element signature="e#432#433#0" expanded="true" />
-            <element signature="e#474#475#0" expanded="true" />
-            <element signature="e#538#539#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="221">
+          <caret line="13" column="40" selection-start-line="13" selection-start-column="40" selection-end-line="13" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/geometries/Cylinder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="56">
+          <caret line="7" column="33" lean-forward="true" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/geometries/RadialGeometry.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -878,14 +851,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/unittests/PlaneTest.java">
+    <entry file="file://$PROJECT_DIR$/src/geometries/Polygon.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="111">
-          <caret line="39" column="30" selection-start-line="39" selection-start-column="30" selection-end-line="39" selection-end-column="30" />
+        <state relative-caret-position="816">
+          <caret line="50" selection-start-line="50" selection-end-line="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/unittests/SphereTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="26" column="5" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
+          <folding>
+            <element signature="e#382#383#0" expanded="true" />
+            <element signature="e#432#433#0" expanded="true" />
+            <element signature="e#474#475#0" expanded="true" />
+            <element signature="e#538#539#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/geometries/Sphere.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="26" column="33" selection-start-line="26" selection-start-column="33" selection-end-line="26" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#751#752#0" expanded="true" />
-            <element signature="e#781#782#0" expanded="true" />
           </folding>
         </state>
       </provider>

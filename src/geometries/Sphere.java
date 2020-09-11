@@ -1,7 +1,10 @@
 package geometries;
 
 import primitives.Point3D;
+import primitives.Ray;
 import primitives.Vector;
+
+import java.util.List;
 
 public class Sphere extends RadialGeometry{
 
@@ -24,13 +27,17 @@ public class Sphere extends RadialGeometry{
     /**
      * a constructor for the sphere
      */
-    public Sphere(Point3D p, double radius){
+    public Sphere(double radius, Point3D p){
         super(radius);
         this._center = p;
     }
 
 
     /* Functions */
+
+    public List<Point3D> findIntersections(Ray ray){
+        return null;
+    }
 
     /**
      * implements the get normal function

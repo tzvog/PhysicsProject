@@ -17,7 +17,7 @@ public class SphereTest {
     @Before
     public void start()
     {
-        s = new Sphere(new Point3D(0,0, 0), 1);
+        s = new Sphere(1, new Point3D(0,0, 0));
     }
 
 

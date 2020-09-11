@@ -1,7 +1,10 @@
 package geometries;
 
 import primitives.Point3D;
+import primitives.Ray;
 import primitives.Vector;
+
+import java.util.List;
 
 /**
  * a class to implement a plane
@@ -67,6 +70,11 @@ public class Plane implements Geometry {
     }
 
     /* Functions */
+
+    @Override
+    public List<Point3D> findIntersections(Ray ray) {
+        return null;
+    }
 
     /**
      * gets the normal of the vector
