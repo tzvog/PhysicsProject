@@ -29,4 +29,8 @@ public class TubeTest {
     @Test
     public void getNormal() {
     }
+
+    @Test
+    public void findIntersections() {
+    }
 }

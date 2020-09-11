@@ -39,4 +39,8 @@ public class PlaneTest {
     @Test
     public void get_normal() {
     }
+
+    @Test
+    public void findIntersections() {
+    }
 }
