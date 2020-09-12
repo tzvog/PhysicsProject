@@ -4,6 +4,7 @@ import primitives.Point3D;
 import primitives.Ray;
 import primitives.Vector;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Sphere extends RadialGeometry{
@@ -35,8 +36,41 @@ public class Sphere extends RadialGeometry{
 
     /* Functions */
 
+    /***
+     * fins the intersection of the ray with the Sphere
+     * @param ray the ray we want hitting the object
+     * @return the list of points where an intersection happens
+     */
     public List<Point3D> findIntersections(Ray ray){
-        return null;
+
+        List<Point3D> ret = new ArrayList<>();
+
+        // find the vector that goes through the sphere
+        Vector l = this._center.subtract(ray.get_POO());
+        double tm = l.dotProduct(ray.get_direction());
+        double d = Math.sqrt(Math.abs(l.lengthSquared()) - Math.pow(tm, 2.0));
+
+        // checks that we are not less than the radius
+        if(d > this.get_radius())
+        {
+            return ret;
+        }
+
+
+        // fins the actual intersection points
+        double th = Math.abs(Math.pow(this.get_radius(), 2) - Math.pow(d,2));
+
+        if((tm - th) > 0){
+            Point3D p1 = new Point3D(ray.get_POO().add(ray.get_direction().scale((tm - th))));
+            ret.add(p1);
+        }
+
+        if ((tm + th) > 0){
+            Point3D p2 = new Point3D(ray.get_POO().add(ray.get_direction().scale((tm + th))));
+            ret.add(p2);
+        }
+
+        return ret;
     }
 
     /**

@@ -7,8 +7,8 @@ public class Ray {
 
     /* local variable declaration */
 
-    Point3D _point;
-    Vector _vec;
+    private Point3D _POO;
+    private Vector _direction;
 
     /* Getters */
 
@@ -16,16 +16,16 @@ public class Ray {
      * gets a point
      * @return the point
      */
-    public Point3D get_point() {
-        return _point;
+    public Point3D get_POO() {
+        return _POO;
     }
 
     /**
      * gets the vector
      * @return a vector
      */
-    public Vector get_vec() {
-        return _vec;
+    public Vector get_direction() {
+        return _direction;
     }
 
     /* Constructors */
@@ -35,8 +35,8 @@ public class Ray {
      */
     public Ray(Point3D point, Vector vec){
 
-        this._point = point;
-        this._vec = vec.normalized();
+        this._POO = point;
+        this._direction = vec.normalized();
     }
 
 
@@ -46,7 +46,7 @@ public class Ray {
      */
     @Override
     public String toString() {
-        return "" + this._vec + " " + this._point;
+        return "" + this._direction + " " + this._POO;
     }
 
     /**
@@ -60,6 +60,6 @@ public class Ray {
         if (obj == null) return false;
         if (!(obj instanceof Vector)) return false;
         Ray oth = (Ray) obj;
-        return this._point.equals(oth._point) && this._vec.equals(oth._vec);
+        return this._POO.equals(oth._POO) && this._direction.equals(oth._direction);
     }
 }
