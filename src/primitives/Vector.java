@@ -54,7 +54,7 @@ public class Vector {
      */
     public Vector(Point3D point)
     {
-        this(point.get_firstCoordinate(), point.get_secondCoordinate(), point.get_thirdCoordinate());
+        this(point.get_x(), point.get_y(), point.get_z());
     }
 
     /**
@@ -84,12 +84,12 @@ public class Vector {
      * @return the new subtracted vector
      */
     public Vector subtract(Vector other){
-        return new Vector((this.get_point().get_firstCoordinate().get() -
-                        other.get_point().get_firstCoordinate().get()),
-                        (this.get_point().get_secondCoordinate().get() -
-                        other.get_point().get_secondCoordinate().get()),
-                        (this.get_point().get_thirdCoordinate().get() -
-                        other.get_point().get_thirdCoordinate().get()));
+        return new Vector((this.get_point().get_x().get() -
+                        other.get_point().get_x().get()),
+                        (this.get_point().get_y().get() -
+                        other.get_point().get_y().get()),
+                        (this.get_point().get_z().get() -
+                        other.get_point().get_z().get()));
 
     }
 
@@ -105,9 +105,9 @@ public class Vector {
             throw  new IllegalArgumentException("bad zeo scale");
         }
 
-        return new Vector((scalar * this.get_point().get_firstCoordinate().get()),
-                (scalar * this.get_point().get_secondCoordinate().get()),
-                (scalar * this.get_point().get_thirdCoordinate().get()));
+        return new Vector((scalar * this.get_point().get_x().get()),
+                (scalar * this.get_point().get_y().get()),
+                (scalar * this.get_point().get_z().get()));
     }
 
     /**
@@ -116,12 +116,12 @@ public class Vector {
      * @return the dot product
      */
     public double dotProduct(Vector other){
-        return ((this.get_point().get_firstCoordinate().get() *
-                other.get_point().get_firstCoordinate().get()) +
-                (this.get_point().get_secondCoordinate().get() *
-                other.get_point().get_secondCoordinate().get()) +
-                (this.get_point().get_thirdCoordinate().get() *
-                 other.get_point().get_thirdCoordinate().get()));
+        return ((this.get_point().get_x().get() *
+                other.get_point().get_x().get()) +
+                (this.get_point().get_y().get() *
+                other.get_point().get_y().get()) +
+                (this.get_point().get_z().get() *
+                 other.get_point().get_z().get()));
     }
 
     /**
@@ -139,18 +139,18 @@ public class Vector {
 
         // creates a new cross product vector
         return new Vector(
-                (this.get_point().get_secondCoordinate().get() *
-                            other.get_point().get_thirdCoordinate().get()) -
-                            (this.get_point().get_thirdCoordinate().get() *
-                            other.get_point().get_secondCoordinate().get()),
-                            -((this.get_point().get_firstCoordinate().get() *
-                             other.get_point().get_thirdCoordinate().get()) -
-                             (this.get_point().get_thirdCoordinate().get() *
-                             other.get_point().get_firstCoordinate().get())),
-                    (this.get_point().get_firstCoordinate().get() *
-                             other.get_point().get_secondCoordinate().get()) -
-                             (this.get_point().get_secondCoordinate().get() *
-                             other.get_point().get_firstCoordinate().get()));
+                (this.get_point().get_y().get() *
+                            other.get_point().get_z().get()) -
+                            (this.get_point().get_z().get() *
+                            other.get_point().get_y().get()),
+                            -((this.get_point().get_x().get() *
+                             other.get_point().get_z().get()) -
+                             (this.get_point().get_z().get() *
+                             other.get_point().get_x().get())),
+                    (this.get_point().get_x().get() *
+                             other.get_point().get_y().get()) -
+                             (this.get_point().get_y().get() *
+                             other.get_point().get_x().get()));
     }
 
     /***
@@ -179,9 +179,9 @@ public class Vector {
         double scalar = (1 / Math.sqrt(dotProduct(this)));
 
         // creates a new point and sets it our point
-        this._point = new Point3D((scalar * this.get_point().get_firstCoordinate().get()),
-                (scalar * this.get_point().get_secondCoordinate().get()),
-                (scalar * this.get_point().get_thirdCoordinate().get()));
+        this._point = new Point3D((scalar * this.get_point().get_x().get()),
+                (scalar * this.get_point().get_y().get()),
+                (scalar * this.get_point().get_z().get()));
 
         return this;
     }
@@ -193,8 +193,8 @@ public class Vector {
     public Vector normalized(){
 
         // creates a new vector
-        Vector newVec = new Vector(this.get_point().get_firstCoordinate(),
-                this.get_point().get_secondCoordinate(), this._point.get_thirdCoordinate());
+        Vector newVec = new Vector(this.get_point().get_x(),
+                this.get_point().get_y(), this._point.get_z());
 
         // normalizes the new vector
         newVec.normalize();

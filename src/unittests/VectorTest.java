@@ -89,14 +89,14 @@ public class VectorTest {
 
         v = new Vector(2, 3, 5);
 
-        assertEquals(2.0, v.get_point().get_firstCoordinate().get(), 0);
-        assertEquals(3.0, v.get_point().get_secondCoordinate().get(), 0);
-        assertEquals(5.0, v.get_point().get_thirdCoordinate().get(), 0);
+        assertEquals(2.0, v.get_point().get_x().get(), 0);
+        assertEquals(3.0, v.get_point().get_y().get(), 0);
+        assertEquals(5.0, v.get_point().get_z().get(), 0);
 
 
-        assertNotEquals(6.0, v.get_point().get_firstCoordinate().get(), 0);
-        assertNotEquals(6.0, v.get_point().get_secondCoordinate().get(), 0);
-        assertNotEquals(6.0, v.get_point().get_thirdCoordinate().get(), 0);
+        assertNotEquals(6.0, v.get_point().get_x().get(), 0);
+        assertNotEquals(6.0, v.get_point().get_y().get(), 0);
+        assertNotEquals(6.0, v.get_point().get_z().get(), 0);
 
     }
 
@@ -115,9 +115,9 @@ public class VectorTest {
         v4 = new Vector(1, 2, 3);
         v5 = new Vector(v.add(v4));
 
-        assertEquals(3 , v5.get_point().get_firstCoordinate().get(), 0.0);
-        assertEquals(5 , v5.get_point().get_secondCoordinate().get(), 0.0);
-        assertEquals(8 , v5.get_point().get_thirdCoordinate().get(), 0.0);
+        assertEquals(3 , v5.get_point().get_x().get(), 0.0);
+        assertEquals(5 , v5.get_point().get_y().get(), 0.0);
+        assertEquals(8 , v5.get_point().get_z().get(), 0.0);
 
     }
 
@@ -136,9 +136,9 @@ public class VectorTest {
         v4 = new Vector(1, 2, 3);
         v5 = new Vector(v.subtract(v4));
 
-        assertEquals(1 , v5.get_point().get_firstCoordinate().get(), 0.0);
-        assertEquals(1 , v5.get_point().get_secondCoordinate().get(), 0.0);
-        assertEquals(2 , v5.get_point().get_thirdCoordinate().get(), 0.0);
+        assertEquals(1 , v5.get_point().get_x().get(), 0.0);
+        assertEquals(1 , v5.get_point().get_y().get(), 0.0);
+        assertEquals(2 , v5.get_point().get_z().get(), 0.0);
     }
 
     @Test
@@ -153,14 +153,14 @@ public class VectorTest {
         catch (IllegalArgumentException ex){}
 
         Vector v2 = v.scale(-1);
-        assertEquals(-2 , v2.get_point().get_firstCoordinate().get(), 0.0);
-        assertEquals(-3 , v2.get_point().get_secondCoordinate().get(), 0.0);
-        assertEquals(-5, v2.get_point().get_thirdCoordinate().get(), 0.0);
+        assertEquals(-2 , v2.get_point().get_x().get(), 0.0);
+        assertEquals(-3 , v2.get_point().get_y().get(), 0.0);
+        assertEquals(-5, v2.get_point().get_z().get(), 0.0);
 
         Vector v3 = v.scale(3);
-        assertEquals(6 , v3.get_point().get_firstCoordinate().get(), 0.0);
-        assertEquals(9 , v3.get_point().get_secondCoordinate().get(), 0.0);
-        assertEquals(15, v3.get_point().get_thirdCoordinate().get(), 0.0);
+        assertEquals(6 , v3.get_point().get_x().get(), 0.0);
+        assertEquals(9 , v3.get_point().get_y().get(), 0.0);
+        assertEquals(15, v3.get_point().get_z().get(), 0.0);
 
     }
 
