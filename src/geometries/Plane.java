@@ -4,6 +4,7 @@ import primitives.Point3D;
 import primitives.Ray;
 import primitives.Vector;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -71,9 +72,26 @@ public class Plane implements Geometry {
 
     /* Functions */
 
+    /**
+     * gets the intersection with the plane
+     * @param ray the ray we are aiming towards the plane
+     * @return the point it has reached
+     */
     @Override
     public List<Point3D> findIntersections(Ray ray) {
-        return null;
+
+        List<Point3D> returnList = new ArrayList<Point3D>();
+
+        // finds the distance from the camera to the point
+        double rayDistanceToPlane = (this._normal.dotProduct(ray.get_POO().subtract(this._p)))
+                / (this._normal.dotProduct(ray.get_direction()));
+
+        // calculates where the ray will hit the plane and adds it to the list
+        Point3D newPoint = new Point3D(ray.get_POO().add(ray.get_direction().scale(rayDistanceToPlane)));
+        returnList.add(newPoint);
+
+        // returns the list
+        return returnList;
     }
 
     /**
