@@ -43,34 +43,39 @@ public class Sphere extends RadialGeometry{
      */
     public List<Point3D> findIntersections(Ray ray){
 
-        List<Point3D> ret = new ArrayList<>();
+        List<Point3D> returnList = new ArrayList<>();
 
         // find the vector that goes through the sphere
-        Vector l = this._center.subtract(ray.get_POO());
-        double tm = l.dotProduct(ray.get_direction());
-        double d = Math.sqrt(Math.abs(l.lengthSquared()) - Math.pow(tm, 2.0));
+        Vector vectorBetweenCenterAndRay = this._center.subtract(ray.get_POO());
+        double triangleFirstLegLength = vectorBetweenCenterAndRay.dotProduct(ray.get_direction());
+        double triangleSecondLegLength = Math.sqrt(Math.abs(vectorBetweenCenterAndRay.lengthSquared())
+                - Math.pow(triangleFirstLegLength, 2.0));
 
         // checks that we are not less than the radius
-        if(d > this.get_radius())
+        if(triangleSecondLegLength > this.get_radius())
         {
-            return ret;
+            return returnList;
         }
 
 
         // fins the actual intersection points
-        double th = Math.abs(Math.pow(this.get_radius(), 2) - Math.pow(d,2));
+        double withinSphereTriangleLeg = Math.abs(Math.pow(this.get_radius(), 2) -
+                Math.pow(triangleSecondLegLength,2));
 
-        if((tm - th) > 0){
-            Point3D p1 = new Point3D(ray.get_POO().add(ray.get_direction().scale((tm - th))));
-            ret.add(p1);
+        // checks if we intersect with the sphere
+        if((triangleFirstLegLength - withinSphereTriangleLeg) > 0){
+            Point3D p1 = new Point3D(ray.get_POO().add(ray.get_direction().scale((triangleFirstLegLength
+                    - withinSphereTriangleLeg))));
+            returnList.add(p1);
         }
 
-        if ((tm + th) > 0){
-            Point3D p2 = new Point3D(ray.get_POO().add(ray.get_direction().scale((tm + th))));
-            ret.add(p2);
+        if ((triangleFirstLegLength + withinSphereTriangleLeg) > 0){
+            Point3D p2 = new Point3D(ray.get_POO().add(ray.get_direction().scale((triangleFirstLegLength
+                    + withinSphereTriangleLeg))));
+            returnList.add(p2);
         }
 
-        return ret;
+        return returnList;
     }
 
     /**
