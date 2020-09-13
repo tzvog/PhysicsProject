@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d8aceace-6a8f-49e0-889d-c538d940ba48" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/unittests/PolygonsTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/unittests/CylinderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/unittests/CylinderTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/unittests/CylindersTests.java" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,11 +22,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/unittests/PolygonsTests.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/unittests/CylinderTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="20" column="22" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
+            <state relative-caret-position="410">
+              <caret line="84" column="5" selection-start-line="84" selection-start-column="5" selection-end-line="84" selection-end-column="5" />
+              <folding>
+                <element signature="e#656#657#0" expanded="true" />
+                <element signature="e#708#709#0" expanded="true" />
+                <element signature="method#testGetNormal#0;class#CylinderTest#0" />
+                <element signature="method#testGetNormalPoint3D#0;class#CylinderTest#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/unittests/PlanesTests.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="31" column="1" lean-forward="true" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -59,8 +75,6 @@
         <option value="$PROJECT_DIR$/src/geometries/SphereTest.java" />
         <option value="$PROJECT_DIR$/src/primitives/Vector.java" />
         <option value="$PROJECT_DIR$/src/unittests/VectorTest.java" />
-        <option value="$PROJECT_DIR$/src/geometries/Cylinder.java" />
-        <option value="$PROJECT_DIR$/src/unittests/CylinderTest.java" />
         <option value="$PROJECT_DIR$/src/geometries/Geometry.java" />
         <option value="$PROJECT_DIR$/src/geometries/Intersectable.java" />
         <option value="$PROJECT_DIR$/src/geometries/Tube.java" />
@@ -79,6 +93,10 @@
         <option value="$PROJECT_DIR$/src/geometries/Sphere.java" />
         <option value="$PROJECT_DIR$/src/unittests/SpheresTests.java" />
         <option value="$PROJECT_DIR$/src/unittests/PolygonsTests.java" />
+        <option value="$PROJECT_DIR$/src/unittests/PlanesTests.java" />
+        <option value="$PROJECT_DIR$/src/geometries/Cylinder.java" />
+        <option value="$PROJECT_DIR$/src/unittests/CylindersTests.java" />
+        <option value="$PROJECT_DIR$/src/unittests/CylinderTest.java" />
       </list>
     </option>
   </component>
@@ -177,7 +195,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.CylindersTests">
+  <component name="RunManager" selected="JUnit.SphereTest.findIntersections">
     <configuration name="CylindersTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="PhysicsProject" />
       <extension name="coverage">
@@ -240,7 +258,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SpheresTests.testFindIntersections" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SphereTest.findIntersections" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="PhysicsProject" />
       <extension name="coverage">
         <pattern>
@@ -249,27 +267,27 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="unittests" />
-      <option name="MAIN_CLASS_NAME" value="unittests.SpheresTests" />
-      <option name="METHOD_NAME" value="testFindIntersections" />
+      <option name="MAIN_CLASS_NAME" value="unittests.SphereTest" />
+      <option name="METHOD_NAME" value="findIntersections" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.SpheresTests.testFindIntersections" />
       <item itemvalue="JUnit.PolygonsTests.testConstructor" />
       <item itemvalue="JUnit.PolygonsTests.testGetNormal" />
       <item itemvalue="JUnit.PlanesTests" />
       <item itemvalue="JUnit.CylindersTests" />
+      <item itemvalue="JUnit.SphereTest.findIntersections" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.SphereTest.findIntersections" />
         <item itemvalue="JUnit.CylindersTests" />
         <item itemvalue="JUnit.PlanesTests" />
         <item itemvalue="JUnit.PolygonsTests.testGetNormal" />
         <item itemvalue="JUnit.PolygonsTests.testConstructor" />
-        <item itemvalue="JUnit.SpheresTests.testFindIntersections" />
       </list>
     </recent_temporary>
   </component>
@@ -297,7 +315,7 @@
       <workItem from="1599829183142" duration="1977000" />
       <workItem from="1599928325731" duration="5185000" />
       <workItem from="1599943210198" duration="152000" />
-      <workItem from="1599978796468" duration="12750000" />
+      <workItem from="1599978796468" duration="13302000" />
     </task>
     <task id="LOCAL-00001" summary="finished point functions">
       <created>1599141910756</created>
@@ -523,22 +541,17 @@
       <option name="project" value="LOCAL" />
       <updated>1600006088055</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="passed given tests">
+      <created>1600006813271</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1600006813271</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="SpheresTests_testFindIntersections - 2020.09.13 at 16h 39m 19s.xml">
-      <configuration name="SpheresTests.testFindIntersections" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SpheresTests_testFindIntersections - 2020.09.13 at 16h 39m 26s.xml">
-      <configuration name="SpheresTests.testFindIntersections" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SpheresTests_testFindIntersections - 2020.09.13 at 16h 39m 35s.xml">
-      <configuration name="SpheresTests.testFindIntersections" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SpheresTests_testFindIntersections - 2020.09.13 at 16h 39m 56s.xml">
-      <configuration name="SpheresTests.testFindIntersections" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="SpheresTests_testFindIntersections - 2020.09.13 at 16h 40m 13s.xml">
       <configuration name="SpheresTests.testFindIntersections" configurationId="JUnit" />
     </history-entry>
@@ -557,9 +570,21 @@
     <history-entry file="SpheresTests_testFindIntersections - 2020.09.13 at 17h 07m 20s.xml">
       <configuration name="SpheresTests.testFindIntersections" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="PolygonsTests_testConstructor - 2020.09.13 at 17h 16m 39s.xml">
+      <configuration name="PolygonsTests.testConstructor" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PolygonsTests_testGetNormal - 2020.09.13 at 17h 16m 47s.xml">
+      <configuration name="PolygonsTests.testGetNormal" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PlanesTests - 2020.09.13 at 17h 17m 14s.xml">
+      <configuration name="PlanesTests" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CylindersTests - 2020.09.13 at 17h 19m 25s.xml">
+      <configuration name="CylindersTests" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="72805000" />
+    <option name="totallyTimeSpent" value="73357000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
@@ -633,7 +658,6 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added Cylinder" />
     <MESSAGE value="JavaDoc Works" />
     <MESSAGE value="setUp for week two" />
     <MESSAGE value="fixed plane problem" />
@@ -658,7 +682,8 @@
     <MESSAGE value="triangle find intersection" />
     <MESSAGE value="added vectors tests ..." />
     <MESSAGE value="passed all sphere tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="passed all sphere tests" />
+    <MESSAGE value="passed given tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="passed given tests" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
@@ -766,19 +791,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/unittests/CylinderTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="34" column="5" lean-forward="true" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
-          <folding>
-            <element signature="e#518#519#0" expanded="true" />
-            <element signature="e#563#564#0" expanded="true" />
-            <element signature="e#656#657#0" expanded="true" />
-            <element signature="e#708#709#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/geometries/Intersectable.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -804,13 +816,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/geometries/Cylinder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="107">
-          <caret line="7" column="33" lean-forward="true" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
         </state>
       </provider>
     </entry>
@@ -885,18 +890,6 @@
           <caret line="80" column="25" selection-start-line="80" selection-start-column="25" selection-end-line="80" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/geometries/Tube.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-102">
-          <caret line="26" column="36" lean-forward="true" selection-start-line="26" selection-start-column="36" selection-end-line="26" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#616#617#0" expanded="true" />
-            <element signature="e#643#644#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -982,8 +975,54 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/unittests/PolygonsTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
+        <state relative-caret-position="-930">
           <caret line="20" column="22" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/geometries/Tube.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#616#617#0" expanded="true" />
+            <element signature="e#643#644#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/geometries/Cylinder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="87">
+          <caret line="7" column="31" lean-forward="true" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/unittests/CylindersTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/unittests/CylinderTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="410">
+          <caret line="84" column="5" selection-start-line="84" selection-start-column="5" selection-end-line="84" selection-end-column="5" />
+          <folding>
+            <element signature="e#656#657#0" expanded="true" />
+            <element signature="e#708#709#0" expanded="true" />
+            <element signature="method#testGetNormal#0;class#CylinderTest#0" />
+            <element signature="method#testGetNormalPoint3D#0;class#CylinderTest#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/unittests/PlanesTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="31" column="1" lean-forward="true" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="1" />
         </state>
       </provider>
     </entry>
