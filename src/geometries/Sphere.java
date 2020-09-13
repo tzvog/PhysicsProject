@@ -45,37 +45,46 @@ public class Sphere extends RadialGeometry{
 
         List<Point3D> returnList = new ArrayList<>();
 
+        // checks what happens when the vector starts through the center spot
+        if(this.get_center().equals(ray.get_POO())){
+            returnList.add(new Point3D(ray.get_POO().add(ray.get_direction().normalized())));
+            return returnList;
+        }
+
         // find the vector that goes through the sphere
         Vector vectorBetweenCenterAndRay = this._center.subtract(ray.get_POO());
         double triangleFirstLegLength = vectorBetweenCenterAndRay.dotProduct(ray.get_direction());
-        double triangleSecondLegLength = Math.sqrt(Math.abs(vectorBetweenCenterAndRay.lengthSquared())
+
+        // finds the distance between dot and center
+        double triangleSecondLegLength = Math.sqrt(
+                vectorBetweenCenterAndRay.lengthSquared()
                 - Math.pow(triangleFirstLegLength, 2.0));
 
         // checks that we are not less than the radius
-        if(triangleSecondLegLength > this.get_radius())
+        if(triangleSecondLegLength >= this.get_radius())
         {
-            return returnList;
+            return null;
         }
 
 
         // fins the actual intersection points
-        double withinSphereTriangleLeg = Math.abs(Math.pow(this.get_radius(), 2) -
+        double withinSphereTriangleLeg = Math.sqrt(Math.pow(this.get_radius(), 2) -
                 Math.pow(triangleSecondLegLength,2));
 
-        // checks if we intersect with the sphere
+        // checks if we intersect with the sphere and if so where
         if((triangleFirstLegLength - withinSphereTriangleLeg) > 0){
-            Point3D p1 = new Point3D(ray.get_POO().add(ray.get_direction().scale((triangleFirstLegLength
-                    - withinSphereTriangleLeg))));
+            Point3D p1 = new Point3D(ray.get_POO().add(ray.get_direction().scale(
+                    (triangleFirstLegLength - withinSphereTriangleLeg))));
             returnList.add(p1);
         }
 
         if ((triangleFirstLegLength + withinSphereTriangleLeg) > 0){
-            Point3D p2 = new Point3D(ray.get_POO().add(ray.get_direction().scale((triangleFirstLegLength
-                    + withinSphereTriangleLeg))));
+            Point3D p2 = new Point3D(ray.get_POO().add(ray.get_direction().scale(
+                    (triangleFirstLegLength + withinSphereTriangleLeg))));
             returnList.add(p2);
         }
 
-        return returnList;
+        return  (returnList.size() != 0) ? returnList : null ;
     }
 
     /**

@@ -12,8 +12,6 @@ import primitives.*;
 
 /**
  * Tube class tests
- * 
- * @author Dan
  *
  */
 public class TubesTests {

@@ -11,9 +11,8 @@ import primitives.*;
 
 /**
  * Unit tests for primitives.Vector class
- * 
- * @author Dan
  */
+
 public class VectorsTests {
     /**
      * Test method for {@link Vector#add(Vector)}.
