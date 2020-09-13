@@ -26,7 +26,7 @@ public class Cylinder extends Tube {
      * a constructor for a cylinder
      * @param radius the radius of the cylinder
      */
-    public Cylinder(double radius, double height, Ray axis)
+    public Cylinder(double radius, Ray axis, double height)
     {
         super(radius, axis);
         this._height = height;

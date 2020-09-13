@@ -17,8 +17,8 @@ public class CylinderTest {
     @Before
     public void setUp()
     {
-        c = new Cylinder(1.0, 2.0, new Ray(new Point3D(0,0,0),
-                new Vector(1,0,0)));
+        c = new Cylinder(1.0, new Ray(new Point3D(0,0,0),
+                new Vector(1,0,0)), 2.0);
     }
 
     @Test
