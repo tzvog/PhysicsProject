@@ -22,6 +22,12 @@ public class Triangle extends Polygon{
         super(firstPoint, secondPoint, thirdPoint);
     }
 
+
+    /**
+     * finds the intersection
+     * @param ray the ray that is hitting the object
+     * @return the intersection point
+     */
     @Override
     public List<Point3D> findIntersections(Ray ray) {
 
@@ -49,5 +55,30 @@ public class Triangle extends Polygon{
 
 
         return returnList;
+    }
+
+    /**
+     * added the get normal function
+     * @param point the point we are normalizing with
+     * @return the normalized vector
+     */
+    @Override
+    public Vector getNormal(Point3D point) {
+
+        Vector v1 = this._vertices.get(1).subtract(this._vertices.get(0));
+        Vector v2 = this._vertices.get(2).subtract(this._vertices.get(0));
+
+        Vector n = v1.crossProduct(v2);
+
+        return n.normalize();
+    }
+
+    /**
+     * makes it easier to use the previous function
+     * @return the normalized vector
+     */
+    public Vector getNormal()
+    {
+        return this.getNormal(null);
     }
 }
