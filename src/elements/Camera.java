@@ -56,7 +56,7 @@ public class Camera {
      * @param vUp the up vector
      * @param vRight the right angle vector
      */
-    public Camera(Point3D p ,Vector vTo, Vector vUp, Vector vRight)
+    public Camera(Point3D p, Vector vTo, Vector vUp, Vector vRight)
     {
         this._P0 = p;
         this._vTo = vTo;
@@ -79,7 +79,8 @@ public class Camera {
      * default constructor
      */
     public Camera() {
-        this(new Vector(0,0,-1), new Vector(0,1,0));
+        this(new Vector(0,1,0),
+                new Vector(0,0,-1));
     }
 
     /**
@@ -111,18 +112,58 @@ public class Camera {
                                   double screenDist, double screenWidth,
                                   double screenHeight){
 
+        // gets the center point of the screen
         Point3D pointCenter = this._P0.add(this._vTo.scale(screenDist));
+
+        // finds where the point is
         double RX = screenWidth / Nx;
         double RY = screenHeight / Ny;
 
-        Ray t = new Ray(new Point3D(0,0,0), new Vector(0,0,0));
+        double nxDivision = (double)Nx / 2;
+        double nyDivision = (double) Ny / 2;
 
-        // TODO check that we want is the point center and the vector
-        Ray n =  new Ray(this.get_P0(),
-                new Vector(pointCenter.add(this._vRight.scale((x - (Nx/2)) + (RX/2)).subtract(
-                                this._vUp.scale((y - (Ny/2)) + (RY/2))))));
+        // finds what scalar to multiply the vector by
+        double rightScalar = ((x - nxDivision) * RX) + (RX / 2);
+        double upScalar = ((y - nyDivision) * RY) + (RY / 2);
 
-        return null;
+        Vector rightScaled, upScaled;
+
+        // checks if the right scalar is 0
+        if (rightScalar == 0){
+            rightScaled = this._vRight;
+        }
+        else {
+            rightScaled = this._vRight.scale(rightScalar);
+        }
+
+        // checks if the up scalar is 0
+        if (upScalar == 0){
+            upScaled = this._vUp;
+        }
+        else {
+            upScaled = this._vUp.scale(upScalar);
+        }
+
+        Vector P;
+
+        if(rightScalar == 0 && upScalar == 0)
+        {
+            P = new Vector(pointCenter);
+        }
+        else if(rightScalar == 0) {
+            P = new Vector(pointCenter.add(upScaled.scale(-1)));
+        }
+        else if(upScalar == 0){
+            P = new Vector(pointCenter.add(rightScaled));
+        }
+        else
+        {
+
+            // crates the vector for the ray
+            P = new Vector(pointCenter.add(rightScaled.subtract(upScaled)));
+        }
+
+        return new Ray(this.get_P0(), P);
     }
 
 

@@ -58,7 +58,7 @@ public class Ray {
     public boolean equals(Object obj) {
         if (this == obj) return true;
         if (obj == null) return false;
-        if (!(obj instanceof Vector)) return false;
+        if (!(obj instanceof Ray)) return false;
         Ray oth = (Ray) obj;
         return this._POO.equals(oth._POO) && this._direction.equals(oth._direction);
     }
