@@ -2,27 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d8aceace-6a8f-49e0-889d-c538d940ba48" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Scene/Scene.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/exampleClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/render/ImageWriter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/render/Render.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/unittests/ImageWriterTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/elements/AmbientLight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/elements/AmbientLight.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/elements/Camera.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/elements/Camera.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/geometries/Cylinder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/geometries/Cylinder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/geometries/Plane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/geometries/Plane.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/geometries/Polygon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/geometries/Polygon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/geometries/RadialGeometry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/geometries/RadialGeometry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/geometries/Sphere.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/geometries/Sphere.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/geometries/Triangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/geometries/Triangle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/geometries/Tube.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/geometries/Tube.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/primitives/Coordinate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/primitives/Coordinate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/primitives/Point3D.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/primitives/Point3D.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/primitives/Ray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/primitives/Ray.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/primitives/Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/primitives/Util.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/primitives/Vector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/primitives/Vector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/unittests/CylinderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/unittests/CylinderTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/unittests/PolygonTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/unittests/PolygonTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/unittests/SphereTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/unittests/SphereTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Scene/Scene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/scene/Scene.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -41,38 +25,40 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Scene/Scene.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/render/Render.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="362">
-              <caret line="113" selection-start-line="113" selection-end-line="113" />
+            <state relative-caret-position="379">
+              <caret line="53" column="24" selection-start-line="53" selection-start-column="24" selection-end-line="53" selection-end-column="24" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#548#549#0" expanded="true" />
-                <element signature="e#581#582#0" expanded="true" />
-                <element signature="e#693#694#0" expanded="true" />
-                <element signature="e#727#728#0" expanded="true" />
-                <element signature="e#848#849#0" expanded="true" />
-                <element signature="e#884#885#0" expanded="true" />
-                <element signature="e#1012#1013#0" expanded="true" />
-                <element signature="e#1046#1047#0" expanded="true" />
-                <element signature="e#1155#1156#0" expanded="true" />
-                <element signature="e#1185#1186#0" expanded="true" />
-                <element signature="e#1294#1295#0" expanded="true" />
-                <element signature="e#1332#1333#0" expanded="true" />
+                <element signature="e#293#294#0" expanded="true" />
+                <element signature="e#322#323#0" expanded="true" />
+                <element signature="e#431#432#0" expanded="true" />
+                <element signature="e#466#467#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/exampleClass.java">
+        <entry file="file://$PROJECT_DIR$/src/render/ImageWriter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="362">
-              <caret line="27" column="18" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="18" />
+            <state relative-caret-position="255">
+              <caret line="24" column="48" lean-forward="true" selection-start-line="24" selection-start-column="48" selection-end-line="24" selection-end-column="48" />
               <folding>
-                <element signature="e#616#617#0" expanded="true" />
-                <element signature="e#641#642#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/unittests/ImageWriterTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="162">
+              <caret line="22" column="52" selection-start-line="22" selection-start-column="52" selection-end-line="22" selection-end-column="52" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -85,8 +71,8 @@
       <list>
         <option value="Arquillian JUnit Test Class" />
         <option value="Interface" />
-        <option value="JUnit4 Test Class" />
         <option value="Class" />
+        <option value="JUnit4 Test Class" />
       </list>
     </option>
   </component>
@@ -141,6 +127,9 @@
         <option value="$PROJECT_DIR$/src/a.java" />
         <option value="$PROJECT_DIR$/src/example.java" />
         <option value="$PROJECT_DIR$/src/Scene/Scene.java" />
+        <option value="$PROJECT_DIR$/src/render/ImageWriter.java" />
+        <option value="$PROJECT_DIR$/src/render/Render.java" />
+        <option value="$PROJECT_DIR$/src/unittests/ImageWriterTest.java" />
       </list>
     </option>
   </component>
@@ -172,12 +161,6 @@
               <item name="PhysicsProject" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="PhysicsProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PhysicsProject" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="elements" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -198,7 +181,7 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers" value="true" />
     <property name="create.test.in.the.same.root" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/unittests" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/render" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Libraries" />
@@ -211,18 +194,18 @@
       <recent name="geometries" />
       <recent name="primitives" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\t-dog\IdeaProjects\PhysicsProject\src\unittests" />
-      <recent name="C:\Users\t-dog\IdeaProjects\PhysicsProject\src\elements" />
-      <recent name="C:\Users\t-dog\IdeaProjects\PhysicsProject\src\geometries" />
-      <recent name="C:\Users\t-dog\IdeaProjects\PhysicsProject\src" />
-      <recent name="C:\Users\t-dog\IdeaProjects\PhysicsProject\src\primitives" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\t-dog\IdeaProjects\PhysicsProject\src\render" />
       <recent name="C:\Users\t-dog\IdeaProjects\PhysicsProject\src\unittests" />
+      <recent name="C:\Users\t-dog\IdeaProjects\PhysicsProject\src\elements" />
+      <recent name="C:\Users\t-dog\IdeaProjects\PhysicsProject\src\geometries" />
+      <recent name="C:\Users\t-dog\IdeaProjects\PhysicsProject\src" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -236,6 +219,29 @@
         </RuleState>
       </list>
     </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="ImageWriterTest.makeImage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="PhysicsProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="unittests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="unittests" />
+      <option name="MAIN_CLASS_NAME" value="unittests.ImageWriterTest" />
+      <option name="METHOD_NAME" value="makeImage" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.ImageWriterTest.makeImage" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -265,7 +271,7 @@
       <workItem from="1600259704682" duration="9083000" />
       <workItem from="1600420979535" duration="40000" />
       <workItem from="1600840541134" duration="24365000" />
-      <workItem from="1600941274266" duration="4174000" />
+      <workItem from="1600941274266" duration="7563000" />
     </task>
     <task id="LOCAL-00001" summary="finished point functions">
       <created>1599141910756</created>
@@ -540,16 +546,17 @@
       <option name="project" value="LOCAL" />
       <updated>1600945541506</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="added scene">
+      <created>1600947843452</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1600947843452</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="JoyceCameratestsRayIntersection_CameraRayPlaneIntegration - 2020.09.23 at 17h 16m 36s.xml">
-      <configuration name="JoyceCameratestsRayIntersection.CameraRayPlaneIntegration" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="JoyceCameratestsRayIntersection_CameraRayPlaneIntegration - 2020.09.23 at 17h 16m 53s.xml">
-      <configuration name="JoyceCameratestsRayIntersection.CameraRayPlaneIntegration" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="JoyceCameratestsRayIntersection_CameraRayPlaneIntegration - 2020.09.23 at 17h 23m 33s.xml">
       <configuration name="JoyceCameratestsRayIntersection.CameraRayPlaneIntegration" configurationId="JUnit" />
     </history-entry>
@@ -574,9 +581,15 @@
     <history-entry file="JoyceCameratestsRayIntersection - 2020.09.24 at 12h 45m 36s.xml">
       <configuration name="JoyceCameratestsRayIntersection" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="ImageWriterTest_punch - 2020.09.24 at 15h 05m 33s.xml">
+      <configuration name="ImageWriterTest.punch" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ImageWriterTest_makeImage - 2020.09.24 at 15h 32m 11s.xml">
+      <configuration name="ImageWriterTest.makeImage" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="112405000" />
+    <option name="totallyTimeSpent" value="115794000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
@@ -591,7 +604,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3285968" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.47602132" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.47602132" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.40319717" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -650,7 +663,6 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="passed polygon tests" />
     <MESSAGE value="fixed vector" />
     <MESSAGE value="fixed testing for junit" />
     <MESSAGE value="started vector tests" />
@@ -675,7 +687,8 @@
     <MESSAGE value="passed camera test" />
     <MESSAGE value="passed camera ray intersection tests" />
     <MESSAGE value="ambient light class" />
-    <option name="LAST_COMMIT_MESSAGE" value="ambient light class" />
+    <MESSAGE value="added scene" />
+    <option name="LAST_COMMIT_MESSAGE" value="added scene" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -865,19 +878,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/unittests/CylindersTests.java" />
     <entry file="file://$PROJECT_DIR$/src/unittests/PlanesTests.java" />
-    <entry file="file://$PROJECT_DIR$/src/unittests/CylinderTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="84" column="5" selection-start-line="84" selection-start-column="5" selection-end-line="84" selection-end-column="5" />
-          <folding>
-            <element signature="e#656#657#0" expanded="true" />
-            <element signature="e#708#709#0" expanded="true" />
-            <element signature="method#testGetNormal#0;class#CylinderTest#0" />
-            <element signature="method#testGetNormalPoint3D#0;class#CylinderTest#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/unittests/PolygonsTests.java" />
     <entry file="file://$PROJECT_DIR$/src/unittests/PolygonTests.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1087,21 +1087,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/exampleClass.java">
+    <entry file="file://$PROJECT_DIR$/src/scene/Scene.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
-          <caret line="27" column="18" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="18" />
-          <folding>
-            <element signature="e#616#617#0" expanded="true" />
-            <element signature="e#641#642#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Scene/Scene.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
-          <caret line="113" selection-start-line="113" selection-end-line="113" />
+        <state relative-caret-position="311">
+          <caret line="127" column="41" selection-start-line="127" selection-start-column="41" selection-end-line="127" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#548#549#0" expanded="true" />
@@ -1116,6 +1105,66 @@
             <element signature="e#1185#1186#0" expanded="true" />
             <element signature="e#1294#1295#0" expanded="true" />
             <element signature="e#1332#1333#0" expanded="true" />
+            <element signature="e#2807#2808#0" expanded="true" />
+            <element signature="e#2847#2848#0" expanded="true" />
+            <element signature="e#3018#3019#0" expanded="true" />
+            <element signature="e#3069#3070#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/unittests/CylinderTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="12" column="33" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#testGetNormal#0;class#CylinderTest#0" />
+            <element signature="method#testGetNormalPoint3D#0;class#CylinderTest#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/exampleClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+          <folding>
+            <element signature="e#616#617#0" expanded="true" />
+            <element signature="e#641#642#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/render/Render.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="379">
+          <caret line="53" column="24" selection-start-line="53" selection-start-column="24" selection-end-line="53" selection-end-column="24" />
+          <folding>
+            <element signature="e#293#294#0" expanded="true" />
+            <element signature="e#322#323#0" expanded="true" />
+            <element signature="e#431#432#0" expanded="true" />
+            <element signature="e#466#467#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/render/ImageWriter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="24" column="48" lean-forward="true" selection-start-line="24" selection-start-column="48" selection-end-line="24" selection-end-column="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/unittests/ImageWriterTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="22" column="52" selection-start-line="22" selection-start-column="52" selection-end-line="22" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
