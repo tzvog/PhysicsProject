@@ -82,9 +82,21 @@ public class Plane implements Geometry {
 
         List<Point3D> returnList = new ArrayList<Point3D>();
 
+        // checks that we can divide by the the normal and dot product
+        if((this._normal.dotProduct(ray.get_direction())) == 0)
+        {
+            return null;
+        }
+
         // finds the distance from the camera to the point
-        double rayDistanceToPlane = -1 * ((this._normal.dotProduct(ray.get_POO().subtract(this._p)))
+        double rayDistanceToPlane = -1 *
+                ((this._normal.dotProduct(ray.get_POO().subtract(this._p)))
                 / (this._normal.dotProduct(ray.get_direction())));
+
+        // checks that the distance is not negative
+        if(rayDistanceToPlane < 0) {
+            return null;
+        }
 
         // calculates where the ray will hit the plane and adds it to the list
         Point3D newPoint = new Point3D(ray.get_POO().add(ray.get_direction().scale(rayDistanceToPlane)));

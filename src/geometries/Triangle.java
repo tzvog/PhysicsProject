@@ -43,7 +43,16 @@ public class Triangle extends Polygon{
         Vector N2 = new Vector(v3.crossProduct(v2)).normalize();
         Vector N3 = new Vector(v1.crossProduct(v3)).normalize();
 
-        Vector v = ray.get_direction().subtract(new Vector(ray.get_POO()));
+        Vector v;
+
+        if(!ray.get_POO().equals(Point3D.ZERO))
+        {
+            v = ray.get_direction().subtract(new Vector(ray.get_POO()));
+        }
+        else
+        {
+            v = ray.get_direction();
+        }
 
         // checks if we are within the range of the triangle
         if(((v.dotProduct(N1) > 0) && (v.dotProduct(N2) > 0) && (v.dotProduct(N3) > 0)) ||

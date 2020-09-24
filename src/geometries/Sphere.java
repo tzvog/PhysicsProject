@@ -60,7 +60,7 @@ public class Sphere extends RadialGeometry{
                 vectorBetweenCenterAndRay.lengthSquared()
                 - Math.pow(triangleFirstLegLength, 2.0));
 
-        // checks that we are not less than the radius
+//        // checks that we are not less than the radius
         if(triangleSecondLegLength >= this.get_radius())
         {
             return null;

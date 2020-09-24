@@ -64,6 +64,15 @@ public class Camera {
         this._vRight = vRight;
     }
 
+    /**
+     * constructor to receive two vectors and a point
+     * @param p the point
+     * @param vTo the to vector
+     * @param vUp the up vector
+     */
+    public Camera(Point3D p ,Vector vTo, Vector vUp){
+        this(p, vTo, vUp, vTo.crossProduct(vUp));
+    }
 
     /**
      * a constructor to get only two vectors
@@ -146,6 +155,7 @@ public class Camera {
 
         Vector P;
 
+        // checks if either of the scalars is zero
         if(rightScalar == 0 && upScalar == 0)
         {
             P = new Vector(pointCenter);
@@ -158,9 +168,14 @@ public class Camera {
         }
         else
         {
-
             // crates the vector for the ray
             P = new Vector(pointCenter.add(rightScaled.subtract(upScaled)));
+        }
+
+        // removes the start point from our vector
+        if(!this.get_P0().equals(Point3D.ZERO))
+        {
+            P = P.subtract(new Vector(this.get_P0()));
         }
 
         return new Ray(this.get_P0(), P);
