@@ -12,7 +12,7 @@ public class ImageWriterTest {
     @Test
     public void makeImage()
     {
-        ImageWriter i = new ImageWriter("IM", 500, 500, 10, 10);
+        ImageWriter i = new ImageWriter("IM", 500, 500, 500, 500);
 
 
         for (int j = 0; j < 500; j++) {

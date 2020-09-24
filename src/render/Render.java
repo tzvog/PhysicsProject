@@ -6,8 +6,7 @@ import primitives.Ray;
 import scene.Scene;
 
 import java.awt.*;
-import java.util.ArrayList;
-import java.util.Iterator;
+import java.util.*;
 import java.util.List;
 
 /**
@@ -56,13 +55,45 @@ public class Render {
      */
     public void printGrid(int interval) {
 
+        for (int j = 0; j < this._imageWriter.getHeight(); j++) {
+            for (int k = 0; k <  this._imageWriter.getWidth(); k++) {
+
+                Color c = new Color(0,0,0);
+
+                // checks if we have reached a spot
+                if(((k % interval) == 0) || (j % interval) == 0){
+                    c = new Color(255, 255,255);
+                }
+
+                this._imageWriter.writePixel(j, k, c);
+            }
+        }
+
+        this._imageWriter.writeToimage();
     }
 
     /**
      * renders the image
      */
-    public void renderImage(){
+    public void renderImage() {
 
+        for (int i = 0; i < this._imageWriter.getHeight(); i++) {
+            for (int j = 0; j < this._imageWriter.getWidth(); j++) {
+
+                Ray ray = _scene.get_camera().constructRayThroughPixel
+                        (_imageWriter.getNx(), _imageWriter.getNy(),
+                                this._scene.get_screenDistance(), this._imageWriter.getWidth(),
+                                this._imageWriter.getHeight(), j, i);
+                List<Point3D> intersectionPoints = getSceneRayIntersections(ray);
+
+                if (intersectionPoints.isEmpty()) {
+                    _imageWriter.writePixel(j, i, this._scene.get_background());
+                } else {
+                    Point3D closestPoint = getClosestPoint(intersectionPoints);
+                    _imageWriter.writePixel(j, i, calcColor(closestPoint));
+                }
+            }
+        }
     }
 
     /**
@@ -80,7 +111,11 @@ public class Render {
         {
             Geometry geometry = geometries.next();
             List<Point3D> geometryIntersectionPoints = geometry.findIntersections(ray);
-            intersectionPoints.addAll(geometryIntersectionPoints);
+
+            // checks that a point actually returns
+            if (geometryIntersectionPoints != null){
+                intersectionPoints.addAll(geometryIntersectionPoints);
+            }
         }
 
         return intersectionPoints;
