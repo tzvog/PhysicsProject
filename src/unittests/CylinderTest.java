@@ -49,13 +49,13 @@ public class CylinderTest {
         Cylinder cyl = new Cylinder(1.0, new Ray(new Point3D(0, 0, 1), new Vector(0, 1, 0)), 1d);
 
         // ============ Equivalence Partitions Tests ==============
-        // TC01: Point at a side of the cylinder
+        // TC01: Point at exampleClass side of the cylinder
         assertEquals("Bad normal to cylinder", new Vector(0, 0, 1), cyl.getNormal(new Point3D(0, 0.5, 2)));
 
-        // TC02: Point at a 1st base of the cylinder
+        // TC02: Point at exampleClass 1st base of the cylinder
         assertEquals("Bad normal to lower base of cylinder", new Vector(0, 1, 0), cyl.getNormal(new Point3D(0, 0, 1.5)));
 
-        // TC03: Point at a 2nd base of the cylinder
+        // TC03: Point at exampleClass 2nd base of the cylinder
         assertEquals("Bad normal to upper base of cylinder", new Vector(0, 1, 0), cyl.getNormal(new Point3D(0, 1, 0.5)));
 
         // =============== Boundary Values Tests ==================
@@ -77,7 +77,7 @@ public class CylinderTest {
     @Test
     public void testGetNormalPoint3D() {
         // ============ Equivalence Partitions Tests ==============
-        // TC01: There is a simple single test here
+        // TC01: There is exampleClass simple single test here
         Plane pl = new Plane(new Point3D(0, 0, 1), new Point3D(1, 0, 0), new Point3D(0, 1, 0));
         double sqrt3 = Math.sqrt(1d/3);
 

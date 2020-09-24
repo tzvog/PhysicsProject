@@ -8,12 +8,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * an object to represent a triangle in the plane
+ * an object to represent exampleClass triangle in the plane
  */
 public class Triangle extends Polygon{
 
     /**
-     * a constructor to create a triangle
+     * exampleClass constructor to create exampleClass triangle
      * @param firstPoint the first point
      * @param secondPoint the second point
      * @param thirdPoint the third point

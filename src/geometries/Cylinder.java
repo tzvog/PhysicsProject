@@ -3,7 +3,7 @@ package geometries;
 import primitives.Ray;
 
 /**
- * a class to implement a cylinder
+ * exampleClass class to implement exampleClass cylinder
  */
 public class Cylinder extends Tube {
 
@@ -13,7 +13,7 @@ public class Cylinder extends Tube {
     /* Getters */
 
     /**
-     * a function to get the height
+     * exampleClass function to get the height
      * @return the height
      */
     public double get_height() {
@@ -23,7 +23,7 @@ public class Cylinder extends Tube {
     /* Constructors */
 
     /**
-     * a constructor for a cylinder
+     * exampleClass constructor for exampleClass cylinder
      * @param radius the radius of the cylinder
      */
     public Cylinder(double radius, Ray axis, double height)

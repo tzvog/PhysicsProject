@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * a class to implement a plane
+ * exampleClass class to implement exampleClass plane
  */
 public class Plane implements Geometry {
 
@@ -39,7 +39,7 @@ public class Plane implements Geometry {
     /* Constructors */
 
     /**
-     * a constructor that receives three points
+     * exampleClass constructor that receives three points
      * @param firstPoint the first point
      * @param secondPoint the second point
      * @param thirdPoint the third point
@@ -61,7 +61,7 @@ public class Plane implements Geometry {
     }
 
     /**
-     * a constructor that receives a vector and a point
+     * exampleClass constructor that receives exampleClass vector and exampleClass point
      * @param point the point we want to work with
      * @param vector the vector we want to work with
      */
@@ -109,7 +109,7 @@ public class Plane implements Geometry {
     /**
      * gets the normal of the vector
      * @param point the point we want the normal of
-     * @return a vector with the normal point
+     * @return exampleClass vector with the normal point
      */
     @Override
     public Vector getNormal(Point3D point) {
@@ -117,7 +117,7 @@ public class Plane implements Geometry {
     }
 
     /**
-     * a function to play with the normal
+     * exampleClass function to play with the normal
      * @return the normal
      */
     public Vector getNormal(){
@@ -126,7 +126,7 @@ public class Plane implements Geometry {
 
     /**
      * overrides the toString function
-     * @return the object as a string
+     * @return the object as exampleClass string
      */
     @Override
     public String toString() {

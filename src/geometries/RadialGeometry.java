@@ -9,7 +9,7 @@ public abstract class RadialGeometry implements Geometry {
     /* Getters */
 
     /**
-     * a getter for the radius
+     * exampleClass getter for the radius
      * @return the radius
      */
     public double get_radius() {

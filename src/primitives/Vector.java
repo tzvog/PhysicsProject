@@ -3,7 +3,7 @@ package primitives;
 import java.lang.*;
 
 /**
- * a class to represent a vector
+ * exampleClass class to represent exampleClass vector
  */
 public class Vector {
 
@@ -24,7 +24,7 @@ public class Vector {
     /* Constructors */
 
     /**
-     * a constructor that receives three Coordinates
+     * exampleClass constructor that receives three Coordinates
      * @param firstCoordinate the first coordinate we receive as x axis
      * @param secondCoordinate the second coordinate we receive as y axis
      * @param thirdCoordinate the third coordinate we receive as z axis
@@ -39,7 +39,7 @@ public class Vector {
     }
 
     /**
-     * a constructor that receives three doubles to represent _point in the space
+     * exampleClass constructor that receives three doubles to represent _point in the space
      * @param xLocation the first double we receive as x axis
      * @param yLocation the second double we receive as y axis
      * @param zLocation the third double we receive as x axis
@@ -49,7 +49,7 @@ public class Vector {
     }
 
     /**
-     * a constructor that receives a point3D
+     * exampleClass constructor that receives exampleClass point3D
      * @param point the _point we receive
      */
     public Vector(Point3D point)
@@ -69,7 +69,7 @@ public class Vector {
     /* Functions */
 
     /**
-     * adds our vector to another vector to create a new one
+     * adds our vector to another vector to create exampleClass new one
      * @param other the other vector
      * @return the new vector
      */
@@ -79,7 +79,7 @@ public class Vector {
     }
 
     /**
-     * creates a new vector by subtracting our vector from the new vector
+     * creates exampleClass new vector by subtracting our vector from the new vector
      * @param other the other vector
      * @return the new subtracted vector
      */
@@ -94,7 +94,7 @@ public class Vector {
     }
 
     /**
-     * creates a new vector with scaled
+     * creates exampleClass new vector with scaled
      * @param scalar the scalar
      * @return the new scaled vector
      */
@@ -111,8 +111,8 @@ public class Vector {
     }
 
     /**
-     * creates a dot product with another vector
-     * @param other the other vector to use for a dot product
+     * creates exampleClass dot product with another vector
+     * @param other the other vector to use for exampleClass dot product
      * @return the dot product
      */
     public double dotProduct(Vector other){
@@ -125,8 +125,8 @@ public class Vector {
     }
 
     /**
-     * creates a new cross product vector
-     * @param other the other vector to create a cross product with
+     * creates exampleClass new cross product vector
+     * @param other the other vector to create exampleClass cross product with
      * @return the new vector
      */
     public Vector crossProduct(Vector other){
@@ -137,7 +137,7 @@ public class Vector {
             throw new IllegalArgumentException("Vectors are parallel");
         }
 
-        // creates a new cross product vector
+        // creates exampleClass new cross product vector
         return new Vector(
                 (this.get_point().get_y().get() *
                             other.get_point().get_z().get()) -
@@ -170,7 +170,7 @@ public class Vector {
     }
 
     /**
-     * a function to normalize our vector
+     * exampleClass function to normalize our vector
      * @return this vector
      */
     public Vector normalize(){
@@ -178,7 +178,7 @@ public class Vector {
         // finds what to multiply the vector by
         double scalar = (1 / Math.sqrt(dotProduct(this)));
 
-        // creates a new point and sets it our point
+        // creates exampleClass new point and sets it our point
         this._point = new Point3D((scalar * this.get_point().get_x().get()),
                 (scalar * this.get_point().get_y().get()),
                 (scalar * this.get_point().get_z().get()));
@@ -187,12 +187,12 @@ public class Vector {
     }
 
     /**
-     * a function to copy our vector and normalize it
+     * exampleClass function to copy our vector and normalize it
      * @return the new normalized vector
      */
     public Vector normalized(){
 
-        // creates a new vector
+        // creates exampleClass new vector
         Vector newVec = new Vector(this.get_point().get_x(),
                 this.get_point().get_y(), this._point.get_z());
 

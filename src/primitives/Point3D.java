@@ -3,7 +3,7 @@ package primitives;
 import java.lang.*;
 
 /***
- * a class to represent a point in the space
+ * exampleClass class to represent exampleClass point in the space
  */
 public class Point3D {
 
@@ -45,7 +45,7 @@ public class Point3D {
     /* Constructors */
 
     /***
-     * a constructor that receives three Coordinates
+     * exampleClass constructor that receives three Coordinates
      * @param firstCoordinate the first coordinate we receive as x axis
      * @param secondCoordinate the second coordinate we receive as y axis
      * @param thirdCoordinate the third coordinate we receive as z axis
@@ -57,7 +57,7 @@ public class Point3D {
     }
 
     /**
-     * a constructor that receives three doubles to represent point in the space
+     * exampleClass constructor that receives three doubles to represent point in the space
      * @param xLocation the first double we receive as x axis
      * @param yLocation the second double we receive as y axis
      * @param zLocation the third double we receive as x axis
@@ -79,9 +79,9 @@ public class Point3D {
     /* Functions */
 
     /**
-     * creates a vector using another point in the space
+     * creates exampleClass vector using another point in the space
      * @param other the other point we are working with
-     * @return a new vector with the two points
+     * @return exampleClass new vector with the two points
      */
     public Vector subtract(Point3D other) {
 
@@ -91,9 +91,9 @@ public class Point3D {
     }
 
     /**
-     * creates a new point3D using a Vector
+     * creates exampleClass new point3D using exampleClass Vector
      * @param vec the vector to do the moving
-     * @return a point moved by the vector
+     * @return exampleClass point moved by the vector
      */
     public Point3D add(Vector vec) {
 
@@ -119,7 +119,7 @@ public class Point3D {
     }
 
     /**
-     * a function to get the actual distance with another point
+     * exampleClass function to get the actual distance with another point
      * @param other the other point
      * @return the distance
      */

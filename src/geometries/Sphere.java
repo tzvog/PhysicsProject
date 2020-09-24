@@ -15,7 +15,7 @@ public class Sphere extends RadialGeometry{
     /* Getters */
 
     /**
-     * a getter for the center
+     * exampleClass getter for the center
      * @return the center
      */
     public Point3D get_center() {
@@ -26,7 +26,7 @@ public class Sphere extends RadialGeometry{
     /* Constructors */
 
     /**
-     * a constructor for the sphere
+     * exampleClass constructor for the sphere
      */
     public Sphere(double radius, Point3D p){
         super(radius);
@@ -102,7 +102,7 @@ public class Sphere extends RadialGeometry{
 
     /**
      * override the toString function
-     * @return a string version of the object
+     * @return exampleClass string version of the object
      */
     @Override
     public String toString() {

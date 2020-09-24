@@ -1,7 +1,7 @@
 package primitives;
 
 /**
- * a class to represent a ray
+ * exampleClass class to represent exampleClass ray
  */
 public class Ray {
 
@@ -13,7 +13,7 @@ public class Ray {
     /* Getters */
 
     /**
-     * gets a point
+     * gets exampleClass point
      * @return the point
      */
     public Point3D get_POO() {
@@ -22,7 +22,7 @@ public class Ray {
 
     /**
      * gets the vector
-     * @return a vector
+     * @return exampleClass vector
      */
     public Vector get_direction() {
         return _direction;
@@ -31,7 +31,7 @@ public class Ray {
     /* Constructors */
 
     /**
-     * a constructor for the ray
+     * exampleClass constructor for the ray
      */
     public Ray(Point3D point, Vector vec){
 
@@ -42,7 +42,7 @@ public class Ray {
 
     /**
      * overrides the toString function
-     * @return the object as a string
+     * @return the object as exampleClass string
      */
     @Override
     public String toString() {

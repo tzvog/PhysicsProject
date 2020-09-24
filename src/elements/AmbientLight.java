@@ -5,7 +5,7 @@ import primitives.Point3D;
 import java.awt.Color;
 
 /**
- * a class to represent a Ambient Light
+ * exampleClass class to represent exampleClass Ambient Light
  */
 public class AmbientLight {
 
@@ -35,7 +35,7 @@ public class AmbientLight {
     /* Constructors */
 
     /**
-     * a constructor that receives two values
+     * exampleClass constructor that receives two values
      * @param c the color we receive
      * @param ka gets the intensity
      */
@@ -46,7 +46,7 @@ public class AmbientLight {
     }
 
     /**
-     * a constructor that gets the light
+     * exampleClass constructor that gets the light
      * @param a red intensity
      * @param b green intensity
      * @param c blue intensity
@@ -93,7 +93,7 @@ public class AmbientLight {
 
     /**
      * overrides the toString function
-     * @return the object as a string
+     * @return the object as exampleClass string
      */
     @Override
     public String toString() {

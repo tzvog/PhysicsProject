@@ -52,12 +52,12 @@ public final class Main {
         Vector vCopy = new Vector(v);
         Vector vCopyNormalize = vCopy.normalize();
         if (vCopy != vCopyNormalize)
-            out.println("ERROR: normalize() function creates a new vector");
+            out.println("ERROR: normalize() function creates exampleClass new vector");
         if (!isZero(vCopyNormalize.length() - 1))
-            out.println("ERROR: normalize() result is not a unit vector");
+            out.println("ERROR: normalize() result is not exampleClass unit vector");
         Vector u = v.normalized();
         if (u == v)
-            out.println("ERROR: normalizated() function does not create a new vector");
+            out.println("ERROR: normalizated() function does not create exampleClass new vector");
 
         // Test operations with points and vectors
         Point3D p1 = new Point3D(1, 2, 3); 

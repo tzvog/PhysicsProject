@@ -5,7 +5,7 @@ import primitives.Vector;
 import primitives.Ray;
 
 /**
- * a class to represent a Camera
+ * exampleClass class to represent exampleClass Camera
  */
 public class Camera {
 
@@ -65,7 +65,7 @@ public class Camera {
     }
 
     /**
-     * constructor to receive two vectors and a point
+     * constructor to receive two vectors and exampleClass point
      * @param p the point
      * @param vTo the to vector
      * @param vUp the up vector
@@ -75,7 +75,7 @@ public class Camera {
     }
 
     /**
-     * a constructor to get only two vectors
+     * exampleClass constructor to get only two vectors
      * @param vTo the towards vectors
      * @param vUp the up vector
      */
@@ -115,7 +115,7 @@ public class Camera {
      * @param screenDist the distance to the screen
      * @param screenWidth the width of the screen
      * @param screenHeight the height of the screen
-     * @return a ray
+     * @return exampleClass ray
      */
     public Ray constructRayThroughPixel (int Nx, int Ny, double x, double y,
                                   double screenDist, double screenWidth,
@@ -200,7 +200,7 @@ public class Camera {
 
     /**
      * overrides the toString function
-     * @return the object as a string
+     * @return the object as exampleClass string
      */
     @Override
     public String toString() {

@@ -7,7 +7,7 @@ import primitives.Vector;
 import java.util.List;
 
 /**
- * creates a tube object
+ * creates exampleClass tube object
  */
 public class Tube extends RadialGeometry {
 
@@ -22,7 +22,7 @@ public class Tube extends RadialGeometry {
     /* Constructors */
 
     /**
-     * a constructor for the Tube object
+     * exampleClass constructor for the Tube object
      */
     public Tube(double radius, Ray axis) {
         super(radius);
