@@ -4,6 +4,7 @@ import primitives.Point3D;
 import primitives.Ray;
 import primitives.Vector;
 
+import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,6 +13,21 @@ import java.util.List;
  */
 public class Triangle extends Polygon{
 
+    private Color _color;
+
+    /**
+     * with a color
+     * @param c the color
+     * @param firstPoint the first point
+     * @param secondPoint the second point
+     * @param thirdPoint the third point
+     */
+    public Triangle(Color c, Point3D firstPoint, Point3D secondPoint, Point3D thirdPoint){
+        super(firstPoint, secondPoint, thirdPoint);
+        // sets the color
+        this._color = c;
+    }
+
     /**
      * exampleClass constructor to create exampleClass triangle
      * @param firstPoint the first point
@@ -19,7 +35,7 @@ public class Triangle extends Polygon{
      * @param thirdPoint the third point
      */
     public Triangle(Point3D firstPoint, Point3D secondPoint, Point3D thirdPoint){
-        super(firstPoint, secondPoint, thirdPoint);
+        this(new Color(0,0,0), firstPoint, secondPoint, thirdPoint);
     }
 
 

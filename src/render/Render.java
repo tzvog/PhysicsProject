@@ -53,7 +53,7 @@ public class Render {
     /**
      * renders the image
      */
-    public void render(){
+    public void renderImage(){
 
     }
 }

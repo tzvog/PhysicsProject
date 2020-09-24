@@ -4,6 +4,7 @@ import primitives.Point3D;
 import primitives.Ray;
 import primitives.Vector;
 
+import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,6 +12,7 @@ public class Sphere extends RadialGeometry{
 
     /* local variable declaration */
     private Point3D _center;
+    private Color _color;
 
     /* Getters */
 
@@ -22,15 +24,30 @@ public class Sphere extends RadialGeometry{
         return _center;
     }
 
+    /**
+     * gets the color
+     * @return the color
+     */
+    public Color get_color() {
+        return _color;
+    }
 
     /* Constructors */
 
     /**
      * exampleClass constructor for the sphere
      */
-    public Sphere(double radius, Point3D p){
+    public Sphere(Color color, double radius, Point3D p){
         super(radius);
         this._center = p;
+        this._color = color;
+    }
+
+    /**
+     * exampleClass constructor for the sphere
+     */
+    public Sphere(double radius, Point3D p){
+        this(new Color(0,0,0), radius, p);
     }
 
 

@@ -2,7 +2,7 @@ package scene;
 
 import elements.AmbientLight;
 import elements.Camera;
-import geometries.Geometries;
+import geometries.Geometry;
 
 import java.awt.*;
 import java.util.ArrayList;
@@ -18,7 +18,7 @@ public class Scene {
     private String _sceneName;
     private Color _background;
     private AmbientLight _ambientLight;
-    private List<Geometries> _geometries;
+    private List<Geometry> _geometries;
     private Camera _camera;
     private double _screenDistance;
 
@@ -52,7 +52,7 @@ public class Scene {
      * gets the geometries
      * @return the geometries
      */
-    public List<Geometries> get_geometries() {
+    public List<Geometry> get_geometries() {
         return _geometries;
     }
 
@@ -119,7 +119,7 @@ public class Scene {
      * a function to add geometries
      * @param g the geometry to add
      */
-    public void addGeometry(Geometries g){
+    public void addGeometry(Geometry g){
         this._geometries.add(g);
     }
 
@@ -127,7 +127,7 @@ public class Scene {
      * a function to get the geometries iterator
      * @return the iterator of geometries
      */
-    public Iterator<Geometries> getGeometriesIterator(){
+    public Iterator<Geometry> getGeometriesIterator(){
         return this._geometries.iterator();
     }
 }
