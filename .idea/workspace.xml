@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d8aceace-6a8f-49e0-889d-c538d940ba48" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/unittests/CameraRayIntersectionsIntegrationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/elements/AmbientLight.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/elements/Camera.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/elements/Camera.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/geometries/Plane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/geometries/Plane.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/geometries/Sphere.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/geometries/Sphere.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/geometries/Triangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/geometries/Triangle.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,69 +21,38 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/elements/AmbientLight.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="311">
+              <caret line="66" column="37" selection-start-line="66" selection-start-column="37" selection-end-line="66" selection-end-column="37" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#296#297#0" expanded="true" />
+                <element signature="e#325#326#0" expanded="true" />
+                <element signature="e#420#421#0" expanded="true" />
+                <element signature="e#446#447#0" expanded="true" />
+                <element signature="e#687#688#0" expanded="true" />
+                <element signature="e#732#733#0" expanded="true" />
+                <element signature="e#830#831#0" expanded="true" />
+                <element signature="e#865#866#0" expanded="true" />
+                <element signature="e#1691#1692#0" expanded="true" />
+                <element signature="e#1747#1748#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/elements/Camera.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="118" column="7" lean-forward="true" selection-start-line="118" selection-start-column="7" selection-end-line="181" selection-end-column="5" />
+            <state relative-caret-position="34">
+              <caret line="185" column="4" lean-forward="true" selection-start-line="185" selection-start-column="4" selection-end-line="208" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1357#1358#0" expanded="true" />
-                <element signature="e#1413#1414#0" expanded="true" />
                 <element signature="docComment;method#constructRayThroughPixel#0;class#Camera#0" />
                 <element signature="method#constructRayThroughPixel#0;class#Camera#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/unittests/JoyceCameratestsRayIntersection.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2057">
-              <caret line="135" column="35" lean-forward="true" selection-start-line="135" selection-start-column="35" selection-end-line="135" selection-end-column="35" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/elements/CameraJoyce.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="249">
-              <caret line="56" selection-start-line="56" selection-end-line="56" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/geometries/Plane.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="188">
-              <caret line="96" column="25" selection-start-line="96" selection-start-column="25" selection-end-line="96" selection-end-column="25" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1907#1916#0" expanded="true" />
-                <element signature="e#2953#2954#0" expanded="true" />
-                <element signature="e#3064#3065#0" expanded="true" />
-                <element signature="e#3102#3103#0" expanded="true" />
-                <element signature="e#3302#3303#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/primitives/Ray.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="186">
-              <caret line="27" column="21" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
-              <folding>
-                <element signature="e#411#412#0" expanded="true" />
-                <element signature="e#444#445#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -152,6 +117,7 @@
         <option value="$PROJECT_DIR$/src/unittests/CameraRayIntersectionsIntegrationTests.java" />
         <option value="$PROJECT_DIR$/src/unittests/JoyceCameratestsRayIntersection.java" />
         <option value="$PROJECT_DIR$/src/geometries/Plane.java" />
+        <option value="$PROJECT_DIR$/src/elements/AmbientLight.java" />
       </list>
     </option>
   </component>
@@ -171,7 +137,6 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -194,12 +159,19 @@
               <item name="PhysicsProject" type="b2602c69:ProjectViewProjectNode" />
               <item name="PhysicsProject" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="unittests" type="462c0819:PsiDirectoryNode" />
+              <item name="geometries" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PhysicsProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PhysicsProject" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="primitives" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -254,103 +226,6 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.JoyceCameratestsRayIntersection">
-    <configuration name="CameraRayIntersectionsIntegrationTests.CameraRayPlaneIntegration" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="PhysicsProject" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="unittests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="unittests" />
-      <option name="MAIN_CLASS_NAME" value="unittests.CameraRayIntersectionsIntegrationTests" />
-      <option name="METHOD_NAME" value="CameraRayPlaneIntegration" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CameraRayIntersectionsIntegrationTests.CameraRayTriangleIntegration" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="PhysicsProject" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="unittests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="unittests" />
-      <option name="MAIN_CLASS_NAME" value="unittests.CameraRayIntersectionsIntegrationTests" />
-      <option name="METHOD_NAME" value="CameraRayTriangleIntegration" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="JoyceCameratestsRayIntersection" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="PhysicsProject" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="unittests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="unittests" />
-      <option name="MAIN_CLASS_NAME" value="unittests.JoyceCameratestsRayIntersection" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="JoyceCameratestsRayIntersection.CameraRayPlaneIntegration" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="PhysicsProject" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="unittests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="unittests" />
-      <option name="MAIN_CLASS_NAME" value="unittests.JoyceCameratestsRayIntersection" />
-      <option name="METHOD_NAME" value="CameraRayPlaneIntegration" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="JoyceCameratestsRayIntersection.CameraRayTriangleIntegration" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="PhysicsProject" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="unittests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="unittests" />
-      <option name="MAIN_CLASS_NAME" value="unittests.JoyceCameratestsRayIntersection" />
-      <option name="METHOD_NAME" value="CameraRayTriangleIntegration" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <list>
-      <item itemvalue="JUnit.CameraRayIntersectionsIntegrationTests.CameraRayPlaneIntegration" />
-      <item itemvalue="JUnit.JoyceCameratestsRayIntersection.CameraRayPlaneIntegration" />
-      <item itemvalue="JUnit.JoyceCameratestsRayIntersection.CameraRayTriangleIntegration" />
-      <item itemvalue="JUnit.CameraRayIntersectionsIntegrationTests.CameraRayTriangleIntegration" />
-      <item itemvalue="JUnit.JoyceCameratestsRayIntersection" />
-    </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="JUnit.JoyceCameratestsRayIntersection" />
-        <item itemvalue="JUnit.JoyceCameratestsRayIntersection.CameraRayPlaneIntegration" />
-        <item itemvalue="JUnit.CameraRayIntersectionsIntegrationTests.CameraRayPlaneIntegration" />
-        <item itemvalue="JUnit.CameraRayIntersectionsIntegrationTests.CameraRayTriangleIntegration" />
-        <item itemvalue="JUnit.JoyceCameratestsRayIntersection.CameraRayTriangleIntegration" />
-      </list>
-    </recent_temporary>
-  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -378,7 +253,8 @@
       <workItem from="1599978796468" duration="14688000" />
       <workItem from="1600259704682" duration="9083000" />
       <workItem from="1600420979535" duration="40000" />
-      <workItem from="1600840541134" duration="23948000" />
+      <workItem from="1600840541134" duration="24365000" />
+      <workItem from="1600941274266" duration="1833000" />
     </task>
     <task id="LOCAL-00001" summary="finished point functions">
       <created>1599141910756</created>
@@ -639,16 +515,17 @@
       <option name="project" value="LOCAL" />
       <updated>1600857077987</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="passed camera ray intersection tests">
+      <created>1600940805354</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1600940805355</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="JoyceCameratestsRayIntersection_CameraRayPlaneIntegration - 2020.09.23 at 17h 14m 27s.xml">
-      <configuration name="JoyceCameratestsRayIntersection.CameraRayPlaneIntegration" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="JoyceCameratestsRayIntersection_CameraRayPlaneIntegration - 2020.09.23 at 17h 15m 23s.xml">
-      <configuration name="JoyceCameratestsRayIntersection.CameraRayPlaneIntegration" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="JoyceCameratestsRayIntersection_CameraRayPlaneIntegration - 2020.09.23 at 17h 16m 36s.xml">
       <configuration name="JoyceCameratestsRayIntersection.CameraRayPlaneIntegration" configurationId="JUnit" />
     </history-entry>
@@ -673,15 +550,21 @@
     <history-entry file="JoyceCameratestsRayIntersection_CameraRayPlaneIntegration - 2020.09.24 at 11h 09m 50s.xml">
       <configuration name="JoyceCameratestsRayIntersection.CameraRayPlaneIntegration" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="JoyceCameratestsRayIntersection - 2020.09.24 at 12h 45m 33s.xml">
+      <configuration name="JoyceCameratestsRayIntersection" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="JoyceCameratestsRayIntersection - 2020.09.24 at 12h 45m 36s.xml">
+      <configuration name="JoyceCameratestsRayIntersection" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="107814000" />
+    <option name="totallyTimeSpent" value="110064000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.30364373" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.30850202" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -691,7 +574,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3285968" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.47602132" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.40319717" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.40319717" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -749,7 +632,6 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fixed cross product" />
     <MESSAGE value="passed all the original tests !" />
     <MESSAGE value="passed polygon tests" />
     <MESSAGE value="fixed vector" />
@@ -774,7 +656,8 @@
     <MESSAGE value="added triangle normal" />
     <MESSAGE value="before camera testing" />
     <MESSAGE value="passed camera test" />
-    <option name="LAST_COMMIT_MESSAGE" value="passed camera test" />
+    <MESSAGE value="passed camera ray intersection tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="passed camera ray intersection tests" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -784,12 +667,6 @@
           <line>29</line>
           <properties />
           <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/unittests/JoyceCameratestsRayIntersection.java</url>
-          <line>137</line>
-          <properties />
-          <option name="timeStamp" value="35" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -1036,13 +913,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/primitives/Point3D.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1915">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/primitives/Util.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="314">
@@ -1085,16 +955,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/unittests/JoyceCameraRayIntersectionTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="21" column="42" selection-start-line="21" selection-start-column="42" selection-end-line="21" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/unittests/JoyceCameraRayIntersectionTests.java" />
     <entry file="file://$PROJECT_DIR$/src/geometries/Sphere.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="310">
@@ -1151,9 +1012,11 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/elements/CameraJoyce.java" />
+    <entry file="file://$PROJECT_DIR$/src/unittests/JoyceCameratestsRayIntersection.java" />
     <entry file="file://$PROJECT_DIR$/src/primitives/Ray.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
+        <state relative-caret-position="196">
           <caret line="27" column="21" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
           <folding>
             <element signature="e#411#412#0" expanded="true" />
@@ -1162,48 +1025,56 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/elements/Camera.java">
+    <entry file="file://$PROJECT_DIR$/src/primitives/Point3D.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="118" column="7" lean-forward="true" selection-start-line="118" selection-start-column="7" selection-end-line="181" selection-end-column="5" />
+        <state relative-caret-position="-1768">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/geometries/Plane.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="95" column="51" selection-start-line="95" selection-start-column="51" selection-end-line="95" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1357#1358#0" expanded="true" />
-            <element signature="e#1413#1414#0" expanded="true" />
+            <element signature="e#1907#1916#0" expanded="true" />
+            <element signature="e#2996#2997#0" expanded="true" />
+            <element signature="e#3064#3065#0" expanded="true" />
+            <element signature="e#3102#3103#0" expanded="true" />
+            <element signature="e#3345#3346#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/elements/Camera.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="185" column="4" lean-forward="true" selection-start-line="185" selection-start-column="4" selection-end-line="208" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
             <element signature="docComment;method#constructRayThroughPixel#0;class#Camera#0" />
             <element signature="method#constructRayThroughPixel#0;class#Camera#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/elements/CameraJoyce.java">
+    <entry file="file://$PROJECT_DIR$/src/elements/AmbientLight.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="56" selection-start-line="56" selection-end-line="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/geometries/Plane.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="96" column="25" selection-start-line="96" selection-start-column="25" selection-end-line="96" selection-end-column="25" />
+        <state relative-caret-position="311">
+          <caret line="66" column="37" selection-start-line="66" selection-start-column="37" selection-end-line="66" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1907#1916#0" expanded="true" />
-            <element signature="e#2953#2954#0" expanded="true" />
-            <element signature="e#3064#3065#0" expanded="true" />
-            <element signature="e#3102#3103#0" expanded="true" />
-            <element signature="e#3302#3303#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/unittests/JoyceCameratestsRayIntersection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2057">
-          <caret line="135" column="35" lean-forward="true" selection-start-line="135" selection-start-column="35" selection-end-line="135" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#296#297#0" expanded="true" />
+            <element signature="e#325#326#0" expanded="true" />
+            <element signature="e#420#421#0" expanded="true" />
+            <element signature="e#446#447#0" expanded="true" />
+            <element signature="e#687#688#0" expanded="true" />
+            <element signature="e#732#733#0" expanded="true" />
+            <element signature="e#830#831#0" expanded="true" />
+            <element signature="e#865#866#0" expanded="true" />
+            <element signature="e#1691#1692#0" expanded="true" />
+            <element signature="e#1747#1748#0" expanded="true" />
           </folding>
         </state>
       </provider>
