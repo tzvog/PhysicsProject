@@ -1,6 +1,8 @@
 package render;
 
+import geometries.Geometries;
 import geometries.Geometry;
+import geometries.Intersectable;
 import primitives.Point3D;
 import primitives.Ray;
 import scene.Scene;
@@ -43,7 +45,7 @@ public class Render {
      * @param _scene the scene
      * @param _imageWriter the image writer
      */
-    public Render(Scene _scene, ImageWriter _imageWriter) {
+    public Render(ImageWriter _imageWriter, Scene _scene) {
         this._scene = _scene;
         this._imageWriter = _imageWriter;
     }
@@ -58,18 +60,13 @@ public class Render {
         for (int j = 0; j < this._imageWriter.getHeight(); j++) {
             for (int k = 0; k <  this._imageWriter.getWidth(); k++) {
 
-                Color c = new Color(0,0,0);
-
                 // checks if we have reached a spot
                 if(((k % interval) == 0) || (j % interval) == 0){
-                    c = new Color(255, 255,255);
+                    this._imageWriter.writePixel(j, k, new Color(255, 255,255));
                 }
 
-                this._imageWriter.writePixel(j, k, c);
             }
         }
-
-        this._imageWriter.writeToimage();
     }
 
     /**
@@ -80,47 +77,32 @@ public class Render {
         for (int i = 0; i < this._imageWriter.getHeight(); i++) {
             for (int j = 0; j < this._imageWriter.getWidth(); j++) {
 
-                Ray ray = _scene.get_camera().constructRayThroughPixel
-                        (_imageWriter.getNx(), _imageWriter.getNy(),
-                                this._scene.get_screenDistance(), this._imageWriter.getWidth(),
-                                this._imageWriter.getHeight(), j, i);
-                List<Point3D> intersectionPoints = getSceneRayIntersections(ray);
 
-                if (intersectionPoints.isEmpty()) {
-                    _imageWriter.writePixel(j, i, this._scene.get_background());
+                Ray ray = _scene.get_camera().constructRayThroughPixel(
+                        this._imageWriter.getNx(),this. _imageWriter.getNy(), j, i,
+                        this._scene.get_screenDistance(), this._imageWriter.getWidth(),
+                        this._imageWriter.getHeight());
+
+                Intersectable geometries = this._scene.get_geometries();
+                List<Point3D> intersectionPoints = geometries.findIntersections(ray);
+
+                if (intersectionPoints == null || intersectionPoints.size() == 0) {
+                    _imageWriter.writePixel(j, i, new Color(0,0,0));
                 } else {
                     Point3D closestPoint = getClosestPoint(intersectionPoints);
-                    _imageWriter.writePixel(j, i, calcColor(closestPoint));
+                    _imageWriter.writePixel(j, i, new Color(255, 255, 255));
                 }
             }
         }
+
     }
 
     /**
-     * gets the intersection of the scene with the ray
-     * @param ray the ray
-     * @return the list of points that have an intersection
+     * uses the image writer
      */
-    private List<Point3D> getSceneRayIntersections(Ray ray) {
-
-        Iterator<Geometry> geometries = _scene.getGeometriesIterator();
-        List<Point3D> intersectionPoints = new ArrayList<Point3D>();
-
-        // checks with the next geometry where we have an intersection
-        while (geometries.hasNext())
-        {
-            Geometry geometry = geometries.next();
-            List<Point3D> geometryIntersectionPoints = geometry.findIntersections(ray);
-
-            // checks that a point actually returns
-            if (geometryIntersectionPoints != null){
-                intersectionPoints.addAll(geometryIntersectionPoints);
-            }
-        }
-
-        return intersectionPoints;
+    public void writeToImage(){
+        this._imageWriter.writeToimage();
     }
-
 
     /**
      * gets the closest points
@@ -151,6 +133,7 @@ public class Render {
      */
     private Color calcColor(Point3D point) {
 
-        return _scene.get_ambientLight().getIntesity(point);
+        return new Color(255, 255, 255);
+//        return _scene.get_ambientLight().getIntesity(point);
     }
 }

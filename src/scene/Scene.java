@@ -2,7 +2,9 @@ package scene;
 
 import elements.AmbientLight;
 import elements.Camera;
+import geometries.Geometries;
 import geometries.Geometry;
+import geometries.Intersectable;
 
 import java.awt.*;
 import java.util.ArrayList;
@@ -18,7 +20,8 @@ public class Scene {
     private String _sceneName;
     private Color _background;
     private AmbientLight _ambientLight;
-    private List<Geometry> _geometries;
+//    private List<Geometry> _geometries;
+    private Geometries _geometries;
     private Camera _camera;
     private double _screenDistance;
 
@@ -52,7 +55,7 @@ public class Scene {
      * gets the geometries
      * @return the geometries
      */
-    public List<Geometry> get_geometries() {
+    public Geometries get_geometries() {
         return _geometries;
     }
 
@@ -72,6 +75,24 @@ public class Scene {
         return _screenDistance;
     }
 
+    /* setters */
+
+    public void set_camera(Camera _camera) {
+        this._camera = _camera;
+    }
+
+    public void set_screenDistance(double _screenDistance) {
+        this._screenDistance = _screenDistance;
+    }
+
+    public void set_background(Color _background) {
+        this._background = _background;
+    }
+
+    public void set_ambientLight(AmbientLight _ambientLight) {
+        this._ambientLight = _ambientLight;
+    }
+
     /* Constructors */
 
     /**
@@ -89,15 +110,22 @@ public class Scene {
         this._ambientLight = _ambientLight;
         this._camera = _camera;
         this._screenDistance = _screenDistance;
-        this._geometries = new ArrayList<>();
+        this._geometries = new Geometries();
+    }
+
+    /**
+     * default constructor
+     */
+    public Scene(String name) {
+        this(name, new Color(0,0,0),
+                new AmbientLight(), new Camera(), 150);
     }
 
     /**
      * default constructor
      */
     public Scene() {
-        this(new String(), new Color(0,0,0),
-                new AmbientLight(), new Camera(), 150);
+        this("");
     }
 
     /**
@@ -123,11 +151,7 @@ public class Scene {
         this._geometries.add(g);
     }
 
-    /**
-     * a function to get the geometries iterator
-     * @return the iterator of geometries
-     */
-    public Iterator<Geometry> getGeometriesIterator(){
-        return this._geometries.iterator();
+    public void addGeometries(Intersectable... geometries) {
+        _geometries.add(geometries);
     }
 }
