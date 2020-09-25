@@ -83,13 +83,17 @@ public class Render {
                         this._scene.get_screenDistance(), this._imageWriter.getWidth(),
                         this._imageWriter.getHeight());
 
+
                 Intersectable geometries = this._scene.get_geometries();
                 List<Point3D> intersectionPoints = geometries.findIntersections(ray);
 
+                // checks that we have a point to intersect
                 if (intersectionPoints == null || intersectionPoints.size() == 0) {
+//                    this._imageWriter.writePixel(j, i, this._scene.get_background());
                     _imageWriter.writePixel(j, i, new Color(0,0,0));
                 } else {
                     Point3D closestPoint = getClosestPoint(intersectionPoints);
+//                    this._imageWriter.writePixel(j, i, calcColor(closestPoint));
                     _imageWriter.writePixel(j, i, new Color(255, 255, 255));
                 }
             }
