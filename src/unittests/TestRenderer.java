@@ -17,6 +17,7 @@ import render.Render;
 import scene.Scene;
 
 public class TestRenderer {
+
 	@Test
 	public void basicRenderTwoColorTest() {
 		Scene scene = new Scene("Test scene");
@@ -35,7 +36,7 @@ public class TestRenderer {
 				new Triangle(Color.orange, new Point3D(-100, 0, 100), new Point3D(0, 100, 100), new Point3D(-100, 100, 100)),
 				new Triangle(Color.pink, new Point3D(-100, 0, 100), new Point3D(0, -100, 100), new Point3D(-100, -100, 100)));
 
-		ImageWriter imageWriter = new ImageWriter("base render 3 test", 500, 500, 500, 500);
+		ImageWriter imageWriter = new ImageWriter("basicRenderTest", 500, 500, 500, 500);
 		Render render = new Render(imageWriter, scene);
 
 		render.renderImage();

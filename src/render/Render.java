@@ -89,11 +89,9 @@ public class Render {
                 // checks that we have a point to intersect
                 if (intersectionPoints == null || intersectionPoints.size() == 0) {
                     this._imageWriter.writePixel(j, i, this._scene.get_background());
-//                    _imageWriter.writePixel(j, i, new Color(0,0,0));
                 } else {
                     Intersectable.GeoPoint closestPoint = getClosestPoint(intersectionPoints);
                     this._imageWriter.writePixel(j, i, calcColor(closestPoint));
-//                    _imageWriter.writePixel(j, i, new Color(255, 255, 255));
                 }
             }
         }
