@@ -44,7 +44,7 @@ public abstract class Light {
 
     /* Functions */
 
-    abstract public Color getIntersity(Point3D p);
+    abstract public Color getIntensity(Point3D p);
     abstract public Vector getL(Point3D p);
 
     /**

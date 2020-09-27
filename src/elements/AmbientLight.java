@@ -88,7 +88,7 @@ public class AmbientLight {
         if (obj == null) return false;
         if (!(obj instanceof AmbientLight)) return false;
         AmbientLight oth = (AmbientLight) obj;
-        return this._color.equals(oth._color) && this._ka.equals(oth._color);
+        return this._color.equals(oth._color) && this._ka.equals(oth._ka);
     }
 
     /**
