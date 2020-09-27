@@ -73,14 +73,14 @@ public abstract class Geometry implements Intersectable{
      * @param _materiel the material
      */
     public Geometry(Material _materiel) {
-        this(new Color(0,0,0), _materiel);
+        this(new Color(255,255,255), _materiel);
     }
 
     /**
      * default constructor
      */
     public Geometry() {
-        this(new Color(0,0,0), new Material());
+        this(new Color(255,255,255), new Material());
     }
 
 
