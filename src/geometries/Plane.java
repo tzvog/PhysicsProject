@@ -11,7 +11,7 @@ import java.util.List;
 /**
  * exampleClass class to implement exampleClass plane
  */
-public class Plane implements Geometry {
+public class Plane extends Geometry {
 
 
     /* local variable declaration */
@@ -30,14 +30,6 @@ public class Plane implements Geometry {
         return _p;
     }
 
-    /***
-     * gets the color
-     * @return the color
-     */
-    @Override
-    public Color get_color() {
-        return null;
-    }
 
     /**
      * gets the vector

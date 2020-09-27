@@ -12,7 +12,6 @@ public class Sphere extends RadialGeometry{
 
     /* local variable declaration */
     private Point3D _center;
-    private Color _color;
 
     /* Getters */
 
@@ -24,13 +23,6 @@ public class Sphere extends RadialGeometry{
         return _center;
     }
 
-    @Override
-    /**
-     * returns the color
-     */
-    public Color get_color() {
-        return this._color;
-    }
 
     /* Constructors */
 
@@ -40,7 +32,7 @@ public class Sphere extends RadialGeometry{
     public Sphere(Color color, double radius, Point3D p){
         super(radius);
         this._center = p;
-        _color = color;
+        _emmission = color;
     }
 
     /**

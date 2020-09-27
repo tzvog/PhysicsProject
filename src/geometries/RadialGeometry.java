@@ -1,6 +1,8 @@
 package geometries;
 
-public abstract class RadialGeometry implements Geometry {
+import java.awt.*;
+
+public abstract class RadialGeometry extends Geometry {
 
     /* local variable declaration */
     private double _radius;

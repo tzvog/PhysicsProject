@@ -1,6 +1,5 @@
 package render;
 
-import geometries.Geometries;
 import geometries.Geometry;
 import geometries.Intersectable;
 import primitives.Point3D;
@@ -8,7 +7,6 @@ import primitives.Ray;
 import scene.Scene;
 
 import java.awt.*;
-import java.util.*;
 import java.util.List;
 
 /**
@@ -140,10 +138,14 @@ public class Render {
      */
     private Color calcColor(Intersectable.GeoPoint geoPoint) {
 
-//        Color ambientLight = this._scene.get_ambientLight().getIntesity(geoPoint.point);
-//        return new Color(255, 255, 255);
-//        return _scene.get_ambientLight().getIntesity(point);
-        return geoPoint.geometry.get_color();
+        Color ambientLight = this._scene.get_ambientLight().getIntesity(geoPoint.point);
+        Color emissionLight = geoPoint.geometry.get_emmission();
+
+        Color I0 = new Color (Math.min((ambientLight.getRed() + emissionLight.getRed()), 255),
+                Math.min((ambientLight.getGreen() + emissionLight.getGreen()), 255),
+                Math.min((ambientLight.getBlue() + emissionLight.getBlue()), 255));
+
+        return geoPoint.geometry.get_emmission();
     }
 
 }

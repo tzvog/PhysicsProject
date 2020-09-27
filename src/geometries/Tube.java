@@ -21,7 +21,7 @@ public class Tube extends RadialGeometry {
     }
 
     @Override
-    public Color get_color() {
+    public Color get_emmission() {
         return null;
     }
 

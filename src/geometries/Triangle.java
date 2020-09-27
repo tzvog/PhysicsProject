@@ -13,17 +13,6 @@ import java.util.List;
  */
 public class Triangle extends Polygon{
 
-    Color _color;
-
-
-    /**
-     * gets the color
-     */
-    @Override
-    public Color get_color() {
-        return this._color;
-    }
-
     /**
      * with a color
      * @param c the color
@@ -35,7 +24,7 @@ public class Triangle extends Polygon{
         super(firstPoint, secondPoint, thirdPoint);
 
         // sets the color
-        this._color = c;
+        this._emmission = c;
     }
 
     /**
