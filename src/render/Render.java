@@ -85,16 +85,17 @@ public class Render {
 
 
                 Intersectable geometries = this._scene.get_geometries();
-                List<Point3D> intersectionPoints = geometries.findIntersections(ray);
+                List<Intersectable.GeoPoint> intersectionPoints = geometries.findIntersections(ray);
+
 
                 // checks that we have a point to intersect
                 if (intersectionPoints == null || intersectionPoints.size() == 0) {
-//                    this._imageWriter.writePixel(j, i, this._scene.get_background());
-                    _imageWriter.writePixel(j, i, new Color(0,0,0));
+                    this._imageWriter.writePixel(j, i, this._scene.get_background());
+//                    _imageWriter.writePixel(j, i, new Color(0,0,0));
                 } else {
-                    Point3D closestPoint = getClosestPoint(intersectionPoints);
-//                    this._imageWriter.writePixel(j, i, calcColor(closestPoint));
-                    _imageWriter.writePixel(j, i, new Color(255, 255, 255));
+                    Intersectable.GeoPoint closestPoint = getClosestPoint(intersectionPoints);
+                    this._imageWriter.writePixel(j, i, calcColor(closestPoint));
+//                    _imageWriter.writePixel(j, i, new Color(255, 255, 255));
                 }
             }
         }
@@ -113,31 +114,36 @@ public class Render {
      * @param intersectionPoints a list of intersection points
      * @return a point with the closest point
      */
-    private Point3D getClosestPoint(List<Point3D> intersectionPoints) {
+    private Intersectable.GeoPoint getClosestPoint(List<Intersectable.GeoPoint> intersectionPoints) {
 
         double distance = Double.MAX_VALUE;
         Point3D P0 = this._scene.get_camera().get_P0();
         Point3D minDistancePoint = null;
+        Geometry minGeo = null;
 
         // goes through the points and finds the closest
-        for (Point3D point: intersectionPoints) {
-            if (P0.distance(point) < distance){
-                minDistancePoint = new Point3D(point);
-                distance = P0.distance(point);
+        for (Intersectable.GeoPoint g: intersectionPoints) {
+            if (P0.distance(g.point) < distance){
+                minDistancePoint = new Point3D(g.point);
+                distance = P0.distance(g.point);
+                minGeo = g.geometry;
             }
         }
 
-        return minDistancePoint;
+        return new Intersectable.GeoPoint(minGeo, minDistancePoint);
     }
 
     /**
      * calculates the color
-     * @param point the point
+     * @param geoPoint the geo point
      * @return the color calculated
      */
-    private Color calcColor(Point3D point) {
+    private Color calcColor(Intersectable.GeoPoint geoPoint) {
 
-        return new Color(255, 255, 255);
+//        Color ambientLight = this._scene.get_ambientLight().getIntesity(geoPoint.point);
+//        return new Color(255, 255, 255);
 //        return _scene.get_ambientLight().getIntesity(point);
+        return geoPoint.geometry.get_color();
     }
+
 }

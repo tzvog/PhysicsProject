@@ -20,7 +20,6 @@ public class Scene {
     private String _sceneName;
     private Color _background;
     private AmbientLight _ambientLight;
-//    private List<Geometry> _geometries;
     private Geometries _geometries;
     private Camera _camera;
     private double _screenDistance;

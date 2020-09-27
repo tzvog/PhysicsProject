@@ -24,12 +24,12 @@ public class Sphere extends RadialGeometry{
         return _center;
     }
 
+    @Override
     /**
-     * gets the color
-     * @return the color
+     * returns the color
      */
     public Color get_color() {
-        return _color;
+        return this._color;
     }
 
     /* Constructors */
@@ -40,7 +40,7 @@ public class Sphere extends RadialGeometry{
     public Sphere(Color color, double radius, Point3D p){
         super(radius);
         this._center = p;
-        this._color = color;
+        _color = color;
     }
 
     /**
@@ -58,13 +58,14 @@ public class Sphere extends RadialGeometry{
      * @param ray the ray we want hitting the object
      * @return the list of points where an intersection happens
      */
-    public List<Point3D> findIntersections(Ray ray){
+    public List<GeoPoint> findIntersections(Ray ray){
 
-        List<Point3D> returnList = new ArrayList<>();
+        List<GeoPoint> returnList = new ArrayList<>();
 
         // checks what happens when the vector starts through the center spot
         if(this.get_center().equals(ray.get_POO())){
-            returnList.add(new Point3D(ray.get_POO().add(ray.get_direction().normalized())));
+            returnList.add(new GeoPoint(this,
+                    new Point3D(ray.get_POO().add(ray.get_direction().normalized()))));
             return returnList;
         }
 
@@ -77,7 +78,7 @@ public class Sphere extends RadialGeometry{
                 vectorBetweenCenterAndRay.lengthSquared()
                 - Math.pow(triangleFirstLegLength, 2.0));
 
-//        // checks that we are not less than the radius
+        // checks that we are not less than the radius
         if(triangleSecondLegLength >= this.get_radius())
         {
             return null;
@@ -92,13 +93,13 @@ public class Sphere extends RadialGeometry{
         if((triangleFirstLegLength - withinSphereTriangleLeg) > 0){
             Point3D p1 = new Point3D(ray.get_POO().add(ray.get_direction().scale(
                     (triangleFirstLegLength - withinSphereTriangleLeg))));
-            returnList.add(p1);
+            returnList.add(new GeoPoint(this ,p1));
         }
 
         if ((triangleFirstLegLength + withinSphereTriangleLeg) > 0){
             Point3D p2 = new Point3D(ray.get_POO().add(ray.get_direction().scale(
                     (triangleFirstLegLength + withinSphereTriangleLeg))));
-            returnList.add(p2);
+            returnList.add(new GeoPoint(this, p2));
         }
 
         return  (returnList.size() != 0) ? returnList : null ;

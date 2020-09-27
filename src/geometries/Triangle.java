@@ -13,7 +13,16 @@ import java.util.List;
  */
 public class Triangle extends Polygon{
 
-    private Color _color;
+    Color _color;
+
+
+    /**
+     * gets the color
+     */
+    @Override
+    public Color get_color() {
+        return this._color;
+    }
 
     /**
      * with a color
@@ -24,6 +33,7 @@ public class Triangle extends Polygon{
      */
     public Triangle(Color c, Point3D firstPoint, Point3D secondPoint, Point3D thirdPoint){
         super(firstPoint, secondPoint, thirdPoint);
+
         // sets the color
         this._color = c;
     }
@@ -38,16 +48,15 @@ public class Triangle extends Polygon{
         this(new Color(0,0,0), firstPoint, secondPoint, thirdPoint);
     }
 
-
     /**
      * finds the intersection
      * @param ray the ray that is hitting the object
      * @return the intersection point
      */
     @Override
-    public List<Point3D> findIntersections(Ray ray) {
+    public List<GeoPoint> findIntersections(Ray ray) {
 
-        List<Point3D> returnList = new ArrayList<Point3D>();
+        List<GeoPoint> returnList = new ArrayList<GeoPoint>();
 
         // create vectors that touch the points of the triangle
         Vector v1 = new Vector(this._vertices.get(0).subtract(ray.get_POO()));
@@ -76,6 +85,15 @@ public class Triangle extends Polygon{
 
             // gets the point the intersections with the plane
             returnList = this._plane.findIntersections(ray);
+
+            if(returnList == null || returnList.size() == 0){
+                return null;
+            }
+
+
+            for (GeoPoint g: returnList) {
+                g.geometry = this;
+            }
         }
 
 

@@ -4,6 +4,7 @@ import primitives.Point3D;
 import primitives.Ray;
 import primitives.Vector;
 
+import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,8 +25,18 @@ public class Plane implements Geometry {
      * gets the point
      * @return the point
      */
-    public Point3D get_p() {
+    public Point3D get_p()
+    {
         return _p;
+    }
+
+    /***
+     * gets the color
+     * @return the color
+     */
+    @Override
+    public Color get_color() {
+        return null;
     }
 
     /**
@@ -78,9 +89,9 @@ public class Plane implements Geometry {
      * @return the point it has reached
      */
     @Override
-    public List<Point3D> findIntersections(Ray ray) {
+    public List<GeoPoint> findIntersections(Ray ray) {
 
-        List<Point3D> returnList = new ArrayList<Point3D>();
+        List<GeoPoint> returnList = new ArrayList<GeoPoint>();
 
         // checks that we can divide by the the normal and dot product
         if((this._normal.dotProduct(ray.get_direction())) == 0)
@@ -100,7 +111,7 @@ public class Plane implements Geometry {
 
         // calculates where the ray will hit the plane and adds it to the list
         Point3D newPoint = new Point3D(ray.get_POO().add(ray.get_direction().scale(rayDistanceToPlane)));
-        returnList.add(newPoint);
+        returnList.add(new GeoPoint(this, newPoint));
 
         // returns the list
         return returnList;

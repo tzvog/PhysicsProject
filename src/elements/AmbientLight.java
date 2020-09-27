@@ -59,7 +59,7 @@ public class AmbientLight {
      * default constructor
      */
     public AmbientLight(){
-        this(255, 255, 255);
+        this(new Color(255, 255, 255), 0.1);
     }
 
     /* Functions */

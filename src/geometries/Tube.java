@@ -4,6 +4,7 @@ import primitives.Point3D;
 import primitives.Ray;
 import primitives.Vector;
 
+import java.awt.*;
 import java.util.List;
 
 /**
@@ -17,6 +18,11 @@ public class Tube extends RadialGeometry {
     /* Getters */
     public Ray get_axisRay() {
         return _axisRay;
+    }
+
+    @Override
+    public Color get_color() {
+        return null;
     }
 
     /* Constructors */
@@ -33,7 +39,7 @@ public class Tube extends RadialGeometry {
     /* Functions */
 
     @Override
-    public List<Point3D> findIntersections(Ray ray) {
+    public List<GeoPoint> findIntersections(Ray ray) {
         return null;
     }
 
