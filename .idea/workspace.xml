@@ -229,7 +229,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.Shlav7TesterUpdate.SameTestAsPart6">
+  <component name="RunManager" selected="JUnit.Shlav7TesterUpdate.testAddingLightSources">
     <configuration name="Shlav7TesterUpdate.SameTestAsPart6" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="PhysicsProject" />
       <extension name="coverage">
@@ -241,6 +241,22 @@
       <option name="PACKAGE_NAME" value="unittests" />
       <option name="MAIN_CLASS_NAME" value="unittests.Shlav7TesterUpdate" />
       <option name="METHOD_NAME" value="SameTestAsPart6" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Shlav7TesterUpdate.testAddingLightSources" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="PhysicsProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="unittests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="unittests" />
+      <option name="MAIN_CLASS_NAME" value="unittests.Shlav7TesterUpdate" />
+      <option name="METHOD_NAME" value="testAddingLightSources" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -264,6 +280,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.Shlav7TesterUpdate.testAddingLightSources" />
         <item itemvalue="JUnit.Shlav7TesterUpdate.SameTestAsPart6" />
         <item itemvalue="JUnit.TestRenderer.basicRenderTwoColorTest" />
       </list>

@@ -64,10 +64,12 @@ public class Shlav7TesterUpdate {
 		
 		PointLight pl = new PointLight(new PointLight(new Color(255,100,100), new Point3D(-200, -200, -100), 
 							   0, 0.000001, 0.0000005));
-//		SpotLight sl = new SpotLight(new SpotLight(new Color(255, 100, 100), new Point3D(-200, -200, -100),
-//				0, 0.00001, 0.000005,  new Vector(0,0,0)));
+		SpotLight sl = new SpotLight(new SpotLight(new Color(255, 100, 100),
+				new Point3D(-200, -200, -100),
+				0, 0.00001, 0.000005,  new Vector(0,0,1)));
 		
-//		DirectionalLight dl = new DirectionalLight(new Color(255, 100, 100),new Vector());
+		DirectionalLight dl = new DirectionalLight(new Color(255, 100, 100),
+				new Vector(0,0,1));
 		
 	}
 
