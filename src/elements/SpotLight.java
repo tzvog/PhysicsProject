@@ -8,7 +8,7 @@ import java.awt.*;
 /**
  * a class of a spotlight
  */
-public class SpotLight extends Light{
+public class SpotLight extends PointLight{
 
     /* local variable declaration */
     private Vector _direction;
@@ -28,11 +28,62 @@ public class SpotLight extends Light{
 
     /**
      * constructor that receives a color
+     * it receives all
+     * @param _color    the color
+     * @param _position the position
+     * @param _kc       the kc
+     * @param _kl       the kl
+     * @param _kq       the kq
+     */
+    public SpotLight(Color _color, Point3D _position,
+                     double _kc, double _kl, double _kq, Vector _direction) {
+        super(_color, _position, _kc, _kl, _kq);
+        this._direction = _direction;
+    }
+
+    /**
+     * receives all but colors
+     *
+     * @param _position
+     * @param _kc
+     * @param _kl
+     * @param _kq
+     */
+    public SpotLight(Point3D _position, double _kc, double _kl, double _kq, Vector _direction) {
+        super(_position, _kc, _kl, _kq);
+        this._direction = _direction;
+    }
+
+    /**
+     * does not receive point light
+     *
+     * @param _kc
+     * @param _kl
+     * @param _kq
+     */
+    public SpotLight(double _kc, double _kl, double _kq, Vector _direction) {
+        super(_kc, _kl, _kq);
+        this._direction = _direction;
+    }
+
+    /**
+     * constructor to only receive a point
+     *
+     * @param _position
+     */
+    public SpotLight(Point3D _position, Vector _direction) {
+        super(_position);
+        this._direction = _direction;
+    }
+
+    /**
+     * constructor that receives a color
      * and the direction we want
      * @param _color the color
      */
     public SpotLight(Color _color, Vector _direction) {
-        super(_color);
+        super();
+        this._color = _color;
         this._direction = _direction;
     }
 
@@ -48,7 +99,8 @@ public class SpotLight extends Light{
      * @param _color the color
      */
     public SpotLight(Color _color) {
-        super(_color);
+        super();
+        this._color = _color;
     }
 
     /**
@@ -69,14 +121,26 @@ public class SpotLight extends Light{
 
     /* Functions */
 
+    /**
+     * gets the color of the light hitting the object
+     * @param p the other point
+     * @return the new color
+     */
     @Override
     public Color getIntensity(Point3D p) {
-        return null;
-    }
 
-    @Override
-    public Vector getL(Point3D p) {
-        return null;
+        // gets the dot product and finds if the angle is big enough
+        double dotProduct = this._direction.dotProduct(p.subtract(this.get_position()));
+        double multVal = Math.max(dotProduct, 0);
+
+        // calculates the distance
+        double distance = Math.abs(this._position.distance(p));
+
+        double divider = this._kc + (this._kl * distance) + (this._kq * distance * distance);
+
+        return new Color((int)((this._color.getRed() * multVal)/ divider),
+                (int)((this._color.getGreen() * multVal)/ divider),
+                (int)((this._color.getBlue() * multVal) / divider));
     }
 
     /**

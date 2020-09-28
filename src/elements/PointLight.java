@@ -11,17 +11,25 @@ import java.awt.*;
 public class PointLight extends Light{
 
     /* local variable declaration */
-    private Point3D _position;
-    private double _kc, _kq, _kl;
+    protected Point3D _position;
+    protected double _kc, _kl, _kq;
 
+    /* getters */
+    public Point3D get_position() {
+        return _position;
+    }
     /* Constructors */
 
     /**
      * constructor that receives a color
      * it receives all
      * @param _color the color
+     * @param _kc the kc
+     * @param _position the position
+     * @param _kl the kl
+     * @param _kq the kq
      */
-    public PointLight(Color _color, Point3D _position, double _kc, double _kq, double _kl) {
+    public PointLight(Color _color, Point3D _position, double _kc, double _kl, double _kq) {
         super(_color);
         this._position = _position;
         this._kc = _kc;
@@ -32,7 +40,7 @@ public class PointLight extends Light{
     /**
      * receives all but colors
      */
-    public PointLight(Point3D _position, double _kc, double _kq, double _kl) {
+    public PointLight(Point3D _position, double _kc, double _kl, double _kq) {
         this._position = _position;
         this._kc = _kc;
         this._kq = _kq;
@@ -42,7 +50,7 @@ public class PointLight extends Light{
     /**
      * does not receive point light
      */
-    public PointLight(double _kc, double _kq, double _kl) {
+    public PointLight(double _kc, double _kl, double _kq) {
         this._kc = _kc;
         this._kq = _kq;
         this._kl = _kl;
@@ -81,14 +89,22 @@ public class PointLight extends Light{
     }
 
     /* Functions */
+
+    /**
+     * gets the intensity
+     * @param p the other point
+     * @return the new color
+     */
     @Override
     public Color getIntensity(Point3D p) {
-        return null;
-    }
 
-    @Override
-    public Vector getL(Point3D p) {
-        return null;
+        double distance = Math.abs(this._position.distance(p));
+
+        double divider = this._kc + (this._kl * distance) + (this._kq * distance * distance);
+
+        return new Color((int)(this._color.getRed() / divider),
+                (int)(this._color.getGreen() / divider),
+                (int)(this._color.getBlue() / divider));
     }
 
     /**

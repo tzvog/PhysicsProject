@@ -136,7 +136,7 @@ public class Render {
      */
     private Color calcColor(Intersectable.GeoPoint geoPoint) {
 
-        Color ambientLight = this._scene.get_ambientLight().getIntesity(geoPoint.point);
+        Color ambientLight = this._scene.get_ambientLight().getIntensity(geoPoint.point);
         Color emissionLight = geoPoint.geometry.get_emmission();
 
         Color I0 = new Color (Math.min((ambientLight.getRed() + emissionLight.getRed()), 255),

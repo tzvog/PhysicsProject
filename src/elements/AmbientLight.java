@@ -7,7 +7,7 @@ import java.awt.Color;
 /**
  * exampleClass class to represent exampleClass Ambient Light
  */
-public class AmbientLight {
+public class AmbientLight extends Light{
 
 
     /* local variable declaration */
@@ -69,7 +69,7 @@ public class AmbientLight {
      * @param point the point we need
      * @return the color
      */
-    public Color getIntesity(Point3D point){
+    public Color getIntensity(Point3D point){
 
         return new Color((int)(this._color.getRed() * this._ka),
                 (int)(this._color.getGreen() * this._ka),

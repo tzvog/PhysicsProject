@@ -45,7 +45,6 @@ public abstract class Light {
     /* Functions */
 
     abstract public Color getIntensity(Point3D p);
-    abstract public Vector getL(Point3D p);
 
     /**
      * checks if two points have the same values

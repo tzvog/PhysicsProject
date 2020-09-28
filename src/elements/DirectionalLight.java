@@ -69,15 +69,16 @@ public class DirectionalLight extends Light {
 
     /* Functions */
 
+    /**
+     * gets the color
+     * @param p the point
+     * @return the color
+     */
     @Override
     public Color getIntensity(Point3D p) {
-        return null;
+        return this._color;
     }
 
-    @Override
-    public Vector getL(Point3D p) {
-        return this._direction;
-    }
 
     /**
      * checks if two points have the same values
