@@ -142,22 +142,83 @@ public class Render {
         Color ambientLight = this._scene.get_ambientLight().getIntensity(geoPoint.point);
         Color emissionLight = geoPoint.geometry.get_emmission();
 
+        Color diffuseLight = new Color(0,0,0);
+        Color specularLight = new Color(0,0,0);
+
         for (LightSource l: this._scene.get_lights()) {
 
+            Color defuseAdd = calcDiffuseComp(geoPoint.geometry.get_material().get_kd(),
+                    geoPoint.geometry.getNormal(geoPoint.point), l.getL(geoPoint.point),
+                    l.getIntensity(geoPoint.point));
+
+            // TODO check if the second vector is what is needed
+            Color SpecAdd = calcSpecularComp(geoPoint.geometry.get_material().get_ks(),
+                    new Vector(geoPoint.point.add(new Vector(this._scene.get_camera().get_P0()))),
+                    geoPoint.geometry.getNormal(geoPoint.point),
+                    l.getL(geoPoint.point), geoPoint.geometry.get_material().get_nShininess(),
+                    l.getIntensity(geoPoint.point));
+
+            diffuseLight = new Color((diffuseLight.getRed() + defuseAdd.getRed()),
+                    diffuseLight.getGreen() + defuseAdd.getGreen(),
+                    diffuseLight.getBlue() + defuseAdd.getBlue());
+
+            specularLight = new Color((specularLight.getRed() + SpecAdd.getRed()),
+                    specularLight.getGreen() + SpecAdd.getGreen(),
+                    specularLight.getBlue() + SpecAdd.getBlue());
         }
 
-        Color I0 = new Color (Math.min((ambientLight.getRed() + emissionLight.getRed()), 255),
-                Math.min((ambientLight.getGreen() + emissionLight.getGreen()), 255),
-                Math.min((ambientLight.getBlue() + emissionLight.getBlue()), 255));
-
-        return I0;
+        // calculates the new vector
+        return new Color (Math.min((ambientLight.getRed() + emissionLight.getRed() +
+                diffuseLight.getRed() + specularLight.getRed()), 255),
+                Math.min((ambientLight.getGreen() + emissionLight.getGreen() +
+                        diffuseLight.getGreen() + specularLight.getGreen()), 255),
+                Math.min((ambientLight.getBlue() + emissionLight.getBlue() +
+                        diffuseLight.getBlue() + specularLight.getBlue()), 255));
     }
 
-    private Color calcDiffuseComp(double kd, Vector normal, Vector L, Color lightIntesity){
-        return null;
+    /**
+     * calculates the diffuse for the point
+     * @param kd the kd
+     * @param normal the normal of the vector
+     * @param L the L vector
+     * @param lightIntensity the intensity of the point
+     * @return the intense point
+     */
+    private Color calcDiffuseComp(double kd, Vector normal, Vector L, Color lightIntensity){
+
+        // calculates the amount
+        double dotProductScalar = kd * normal.dotProduct(L);
+
+        // returns the new color
+        return new Color((int)(dotProductScalar * lightIntensity.getRed()),
+                (int)(dotProductScalar * lightIntensity.getGreen()),
+                (int)(dotProductScalar * lightIntensity.getBlue()));
+
     }
 
-    private Color calcSpecularComp(double ks, Vector v, Vector normal, Vector L, ,Color lightIntesity){
-        return null;
+    /**
+     * calculates the specular
+     * @param ks the spec scalar
+     * @param v the v scalar
+     * @param normal the normalized vector
+     * @param D the direction vector
+     * @param shines the shines amount
+     * @param lightIntensity the color
+     * @return the new color
+     */
+    private Color calcSpecularComp(double ks, Vector v, Vector normal,
+                                   Vector D, double shines, Color lightIntensity){
+
+        // finds the R vector
+        Vector R = D.subtract(normal.scale(D.dotProduct(normal) * 2));
+
+        // calculates the new mult amount
+        double multAmount = (Math.pow(v.dotProduct(R), shines)) * ks;
+
+
+        // returns the new color
+        return new Color((int)(multAmount * lightIntensity.getRed()),
+                (int)(multAmount * lightIntensity.getGreen()),
+                (int)(multAmount * lightIntensity.getBlue()));
     }
 }

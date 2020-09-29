@@ -91,7 +91,7 @@ public abstract class Geometry implements Intersectable{
      * @param point the point we are dealing with
      * @return the Vector
      */
-    abstract Vector getNormal(Point3D point);
+    abstract public Vector getNormal(Point3D point);
 
     /**
      * checks if two points have the same values
