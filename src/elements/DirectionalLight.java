@@ -8,7 +8,7 @@ import java.awt.*;
 /**
  * a class to represent a directional light
  */
-public class DirectionalLight extends Light {
+public class DirectionalLight extends Light implements LightSource {
 
     /* local variable declaration */
     private Vector _direction;
@@ -79,6 +79,15 @@ public class DirectionalLight extends Light {
         return this._color;
     }
 
+    /**
+     * gets the L
+     * @param p the point
+     * @return the L
+     */
+    @Override
+    public Vector getL(Point3D p) {
+        return this._direction;
+    }
 
     /**
      * checks if two points have the same values

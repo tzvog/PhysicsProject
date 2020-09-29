@@ -1,9 +1,12 @@
 package render;
 
+import elements.Light;
+import elements.LightSource;
 import geometries.Geometry;
 import geometries.Intersectable;
 import primitives.Point3D;
 import primitives.Ray;
+import primitives.Vector;
 import scene.Scene;
 
 import java.awt.*;
@@ -139,11 +142,22 @@ public class Render {
         Color ambientLight = this._scene.get_ambientLight().getIntensity(geoPoint.point);
         Color emissionLight = geoPoint.geometry.get_emmission();
 
+        for (LightSource l: this._scene.get_lights()) {
+
+        }
+
         Color I0 = new Color (Math.min((ambientLight.getRed() + emissionLight.getRed()), 255),
                 Math.min((ambientLight.getGreen() + emissionLight.getGreen()), 255),
                 Math.min((ambientLight.getBlue() + emissionLight.getBlue()), 255));
 
-        return geoPoint.geometry.get_emmission();
+        return I0;
     }
 
+    private Color calcDiffuseComp(double kd, Vector normal, Vector L, Color lightIntesity){
+        return null;
+    }
+
+    private Color calcSpecularComp(double ks, Vector v, Vector normal, Vector L, ,Color lightIntesity){
+        return null;
+    }
 }

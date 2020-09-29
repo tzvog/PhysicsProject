@@ -11,24 +11,24 @@ public abstract class Geometry implements Intersectable{
 
     /* local variable declaration */
     Color _emmission;
-    Material _materiel;
+    Material _material;
 
     /* Getters */
 
     /**
-     * gets the material
-     * @return the material
+     * gets the _material
+     * @return the _material
      */
-    public Material get_materiel() {
-        return _materiel;
+    public Material get_material() {
+        return _material;
     }
 
     /**
-     * sets the material
-     * @param _materiel the material
+     * sets the _material
+     * @param _material the _material
      */
-    public void set_materiel(Material _materiel) {
-        this._materiel = _materiel;
+    public void set_material(Material _material) {
+        this._material = _material;
     }
 
     /**
@@ -53,11 +53,11 @@ public abstract class Geometry implements Intersectable{
     /**
      * full constructor
      * @param _emmission the color
-     * @param _materiel the material
+     * @param _materiel the _material
      */
     public Geometry(Color _emmission, Material _materiel) {
         this._emmission = _emmission;
-        this._materiel = _materiel;
+        this._material = _materiel;
     }
 
     /**
@@ -69,8 +69,8 @@ public abstract class Geometry implements Intersectable{
     }
 
     /**
-     * a constructor that gets a material
-     * @param _materiel the material
+     * a constructor that gets a _material
+     * @param _materiel the _material
      */
     public Geometry(Material _materiel) {
         this(new Color(255,255,255), _materiel);
@@ -105,7 +105,7 @@ public abstract class Geometry implements Intersectable{
         if (!(obj instanceof Geometry)) return false;
         Geometry oth = (Geometry) obj;
         return this._emmission.equals(oth._emmission) &&
-                this._materiel.equals(oth._materiel);
+                this._material.equals(oth._material);
     }
 
     /**
@@ -114,6 +114,6 @@ public abstract class Geometry implements Intersectable{
      */
     @Override
     public String toString() {
-        return this._emmission + " " + this._materiel;
+        return this._emmission + " " + this._material;
     }
 }

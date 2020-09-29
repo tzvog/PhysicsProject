@@ -2,6 +2,8 @@ package scene;
 
 import elements.AmbientLight;
 import elements.Camera;
+import elements.Light;
+import elements.LightSource;
 import geometries.Geometries;
 import geometries.Geometry;
 import geometries.Intersectable;
@@ -23,6 +25,7 @@ public class Scene {
     private Geometries _geometries;
     private Camera _camera;
     private double _screenDistance;
+    private List<LightSource> _lights;
 
     /* Getters */
 
@@ -74,6 +77,15 @@ public class Scene {
         return _screenDistance;
     }
 
+    /**
+     * gets the light
+     * @return the lights
+     */
+    public List<LightSource> get_lights() {
+        return _lights;
+    }
+
+
     /* setters */
 
     public void set_camera(Camera _camera) {
@@ -110,6 +122,7 @@ public class Scene {
         this._camera = _camera;
         this._screenDistance = _screenDistance;
         this._geometries = new Geometries();
+        this._lights = new ArrayList<LightSource>();
     }
 
     /**
@@ -138,6 +151,7 @@ public class Scene {
         this._camera = other.get_camera();
         this._screenDistance = other.get_screenDistance();
         this._geometries = other.get_geometries();
+        this._lights = other._lights;
     }
 
     /* Functions */
@@ -150,7 +164,19 @@ public class Scene {
         this._geometries.add(g);
     }
 
+    /**
+     * adds a list to the geometry
+     * @param geometries the new geometry
+     */
     public void addGeometries(Intersectable... geometries) {
         _geometries.add(geometries);
+    }
+
+    /**
+     * adds a light to the list
+     * @param L the new light
+     */
+    public void addLight(LightSource L){
+        this._lights.add(L);
     }
 }

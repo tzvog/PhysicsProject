@@ -2,14 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d8aceace-6a8f-49e0-889d-c538d940ba48" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/unittests/Shlav7TesterUpdate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/elements/LightSource.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/elements/AmbientLight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/elements/AmbientLight.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/elements/DirectionalLight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/elements/DirectionalLight.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/elements/Light.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/elements/Light.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/elements/PointLight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/elements/PointLight.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/elements/SpotLight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/elements/SpotLight.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/geometries/Geometry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/geometries/Geometry.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/render/Render.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/render/Render.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scene/Scene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/scene/Scene.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,12 +28,14 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/elements/SpotLight.java">
+        <entry file="file://$PROJECT_DIR$/src/render/Render.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="332">
-              <caret line="94" column="54" selection-start-line="94" selection-start-column="54" selection-end-line="94" selection-end-column="54" />
+            <state relative-caret-position="281">
+              <caret line="161" column="5" selection-start-line="161" selection-start-column="5" selection-end-line="161" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#4340#4341#0" expanded="true" />
+                <element signature="e#4368#4369#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -43,12 +44,58 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/elements/PointLight.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="128">
-              <caret line="100" column="8" lean-forward="true" selection-start-line="100" selection-start-column="8" selection-end-line="100" selection-end-column="63" />
+            <state relative-caret-position="349">
+              <caret line="112" column="20" selection-start-line="112" selection-start-column="20" selection-end-line="112" selection-end-column="20" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#342#343#0" expanded="true" />
-                <element signature="e#374#375#0" expanded="true" />
+                <element signature="e#2601#2602#0" expanded="true" />
+                <element signature="e#2629#2630#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/elements/DirectionalLight.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="84" column="20" selection-start-line="84" selection-start-column="20" selection-end-line="84" selection-end-column="20" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1561#1562#0" expanded="true" />
+                <element signature="e#1595#1596#0" expanded="true" />
+                <element signature="e#1724#1725#0" expanded="true" />
+                <element signature="e#1763#1764#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/elements/LightSource.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/scene/Scene.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="139">
+              <caret line="59" column="16" lean-forward="true" selection-start-line="59" selection-start-column="16" selection-end-line="59" selection-end-column="16" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1219#1220#0" expanded="true" />
+                <element signature="e#1253#1254#0" expanded="true" />
+                <element signature="e#1623#1624#0" expanded="true" />
+                <element signature="e#1653#1654#0" expanded="true" />
+                <element signature="e#3787#3788#0" expanded="true" />
+                <element signature="e#3830#3831#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -60,9 +107,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Arquillian JUnit Test Class" />
-        <option value="Interface" />
         <option value="JUnit4 Test Class" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -72,7 +119,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/primitives/VectorTest.java" />
         <option value="$PROJECT_DIR$/src/geometries/SphereTest.java" />
         <option value="$PROJECT_DIR$/src/primitives/Vector.java" />
         <option value="$PROJECT_DIR$/src/geometries/TubeTest.java" />
@@ -101,7 +147,6 @@
         <option value="$PROJECT_DIR$/src/Scene/Scene.java" />
         <option value="$PROJECT_DIR$/src/render/ImageWriter.java" />
         <option value="$PROJECT_DIR$/src/unittests/ImageWriterTest.java" />
-        <option value="$PROJECT_DIR$/src/scene/Scene.java" />
         <option value="$PROJECT_DIR$/src/geometries/Geometries.java" />
         <option value="$PROJECT_DIR$/src/geometries/Tube.java" />
         <option value="$PROJECT_DIR$/src/geometries/Intersectable.java" />
@@ -114,15 +159,17 @@
         <option value="$PROJECT_DIR$/src/geometries/Plane.java" />
         <option value="$PROJECT_DIR$/src/geometries/Sphere.java" />
         <option value="$PROJECT_DIR$/src/unittests/TestRenderer.java" />
-        <option value="$PROJECT_DIR$/src/render/Render.java" />
         <option value="$PROJECT_DIR$/src/primitives/Material.java" />
-        <option value="$PROJECT_DIR$/src/geometries/Geometry.java" />
-        <option value="$PROJECT_DIR$/src/unittests/Shlav7TesterUpdate.java" />
         <option value="$PROJECT_DIR$/src/elements/Light.java" />
         <option value="$PROJECT_DIR$/src/elements/AmbientLight.java" />
-        <option value="$PROJECT_DIR$/src/elements/DirectionalLight.java" />
-        <option value="$PROJECT_DIR$/src/elements/PointLight.java" />
         <option value="$PROJECT_DIR$/src/elements/SpotLight.java" />
+        <option value="$PROJECT_DIR$/src/unittests/Shlav7TesterUpdate.java" />
+        <option value="$PROJECT_DIR$/src/elements/LightSource.java" />
+        <option value="$PROJECT_DIR$/src/elements/PointLight.java" />
+        <option value="$PROJECT_DIR$/src/elements/DirectionalLight.java" />
+        <option value="$PROJECT_DIR$/src/scene/Scene.java" />
+        <option value="$PROJECT_DIR$/src/geometries/Geometry.java" />
+        <option value="$PROJECT_DIR$/src/render/Render.java" />
       </list>
     </option>
   </component>
@@ -130,9 +177,10 @@
     <servers />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="948" />
-    <option name="width" value="981" />
-    <option name="height" value="1032" />
+    <option name="x" value="-132" />
+    <option name="y" value="-18" />
+    <option name="width" value="1890" />
+    <option name="height" value="960" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -164,6 +212,18 @@
               <item name="PhysicsProject" type="b2602c69:ProjectViewProjectNode" />
               <item name="PhysicsProject" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="geometries" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PhysicsProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PhysicsProject" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="primitives" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PhysicsProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PhysicsProject" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="render" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -190,7 +250,7 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers" value="true" />
     <property name="create.test.in.the.same.root" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/unittests" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ex3" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Libraries" />
@@ -229,7 +289,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.Shlav7TesterUpdate.testAddingLightSources">
+  <component name="RunManager" selected="JUnit.TestRenderer.basicRenderTwoColorTest">
     <configuration name="Shlav7TesterUpdate.SameTestAsPart6" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="PhysicsProject" />
       <extension name="coverage">
@@ -280,9 +340,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TestRenderer.basicRenderTwoColorTest" />
         <item itemvalue="JUnit.Shlav7TesterUpdate.testAddingLightSources" />
         <item itemvalue="JUnit.Shlav7TesterUpdate.SameTestAsPart6" />
-        <item itemvalue="JUnit.TestRenderer.basicRenderTwoColorTest" />
       </list>
     </recent_temporary>
   </component>
@@ -318,21 +378,7 @@
       <workItem from="1601019631462" duration="12099000" />
       <workItem from="1601154488008" duration="16715000" />
       <workItem from="1601207667921" duration="912000" />
-      <workItem from="1601314970239" duration="3542000" />
-    </task>
-    <task id="LOCAL-00003" summary="finished vector functions">
-      <created>1599146163293</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1599146163293</updated>
-    </task>
-    <task id="LOCAL-00004" summary="added radial geomotry">
-      <created>1599147351201</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1599147351201</updated>
+      <workItem from="1601314970239" duration="9476000" />
     </task>
     <task id="LOCAL-00005" summary="added plane class">
       <created>1599208456571</created>
@@ -663,25 +709,24 @@
       <option name="project" value="LOCAL" />
       <updated>1601203753831</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="added directional light project 7 style">
+      <created>1601323737328</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1601323737329</updated>
+    </task>
+    <task id="LOCAL-00053" summary="shalav 7 update">
+      <created>1601323855785</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1601323855785</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TestRenderer_basicRendering - 2020.09.27 at 10h 30m 37s.xml">
-      <configuration name="TestRenderer.basicRendering" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestRenderer_basicRenderTwoColorTest - 2020.09.27 at 10h 31m 04s.xml">
-      <configuration name="TestRenderer.basicRenderTwoColorTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestRenderer_basicRenderTwoColorTest - 2020.09.27 at 10h 44m 51s.xml">
-      <configuration name="TestRenderer.basicRenderTwoColorTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestRenderer_basicRenderTwoColorTest - 2020.09.27 at 11h 24m 55s.xml">
-      <configuration name="TestRenderer.basicRenderTwoColorTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestRenderer_basicRenderTwoColorTest - 2020.09.27 at 11h 25m 12s.xml">
-      <configuration name="TestRenderer.basicRenderTwoColorTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="TestRenderer_basicRenderTwoColorTest - 2020.09.27 at 11h 38m 30s.xml">
       <configuration name="TestRenderer.basicRenderTwoColorTest" configurationId="JUnit" />
     </history-entry>
@@ -697,9 +742,24 @@
     <history-entry file="Shlav7TesterUpdate_SameTestAsPart6 - 2020.09.28 at 22h 19m 04s.xml">
       <configuration name="Shlav7TesterUpdate.SameTestAsPart6" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="Shlav7TesterUpdate_testAddingLightSources - 2020.09.28 at 23h 10m 13s.xml">
+      <configuration name="Shlav7TesterUpdate.testAddingLightSources" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Shlav7TesterUpdate_testAddingLightSources - 2020.09.28 at 23h 10m 26s.xml">
+      <configuration name="Shlav7TesterUpdate.testAddingLightSources" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestRenderer_basicRenderTwoColorTest - 2020.09.29 at 10h 30m 14s.xml">
+      <configuration name="TestRenderer.basicRenderTwoColorTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestRenderer_basicRenderTwoColorTest - 2020.09.29 at 13h 08m 54s.xml">
+      <configuration name="TestRenderer.basicRenderTwoColorTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestRenderer_basicRenderTwoColorTest - 2020.09.29 at 13h 10m 55s.xml">
+      <configuration name="TestRenderer.basicRenderTwoColorTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="158045000" />
+    <option name="totallyTimeSpent" value="163979000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
@@ -773,8 +833,6 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Sphere find intersection" />
-    <MESSAGE value="change Sphere intersection Names" />
     <MESSAGE value="plane find intersection" />
     <MESSAGE value="triangle find intersection" />
     <MESSAGE value="added vectors tests ..." />
@@ -798,7 +856,9 @@
     <MESSAGE value="fixed first part of week 6" />
     <MESSAGE value="finished light" />
     <MESSAGE value="finished Spotlight no implementation of vector meeting point" />
-    <option name="LAST_COMMIT_MESSAGE" value="finished Spotlight no implementation of vector meeting point" />
+    <MESSAGE value="added directional light project 7 style" />
+    <MESSAGE value="shalav 7 update" />
+    <option name="LAST_COMMIT_MESSAGE" value="shalav 7 update" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -928,7 +988,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/unittests/TubesTests.java" />
     <entry file="file://$PROJECT_DIR$/src/unittests/VectorTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4337">
@@ -1150,18 +1209,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/geometries/Geometries.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="107">
-          <caret line="9" column="15" selection-start-line="9" selection-start-column="15" selection-end-line="9" selection-end-column="15" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#544#545#0" expanded="true" />
-            <element signature="e#599#600#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/geometries/Triangle.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1066">
@@ -1193,74 +1240,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/base render 3 test.jpg" />
-    <entry file="file://$PROJECT_DIR$/src/geometries/Intersectable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-296">
-          <caret line="15" column="19" lean-forward="true" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/primitives/Material.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="46" column="23" selection-start-line="46" selection-start-column="23" selection-end-line="46" selection-end-column="23" />
-          <folding>
-            <element signature="e#279#280#0" expanded="true" />
-            <element signature="e#305#306#0" expanded="true" />
-            <element signature="e#392#393#0" expanded="true" />
-            <element signature="e#418#419#0" expanded="true" />
-            <element signature="e#525#526#0" expanded="true" />
-            <element signature="e#559#560#0" expanded="true" />
-            <element signature="e#1247#1248#0" expanded="true" />
-            <element signature="e#1283#1284#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/geometries/Geometry.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-377">
-          <caret line="75" column="34" selection-start-line="75" selection-start-column="34" selection-end-line="75" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/exampleClass.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-105">
           <caret line="5" column="12" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/scene/Scene.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="48" column="20" lean-forward="true" selection-start-line="48" selection-start-column="20" selection-end-line="48" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1012#1013#0" expanded="true" />
-            <element signature="e#1048#1049#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/render/Render.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="138" column="50" lean-forward="true" selection-start-line="138" selection-start-column="50" selection-end-line="138" selection-end-column="50" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/basicRenderTest.jpg">
-      <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/Render test.jpg">
       <provider selected="true" editor-type-id="images" />
@@ -1269,26 +1254,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
           <caret line="23" column="39" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/unittests/Shlav7TesterUpdate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-294">
-          <caret line="23" column="8" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/unittests/TestRenderer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1305,18 +1270,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/elements/DirectionalLight.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1156">
-          <caret line="74" column="25" selection-start-line="74" selection-start-column="25" selection-end-line="74" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1527#1528#0" expanded="true" />
-            <element signature="e#1561#1562#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/elements/AmbientLight.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-59">
@@ -1329,24 +1282,138 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/elements/PointLight.java">
+    <entry file="file://$PROJECT_DIR$/src/unittests/Shlav7TesterUpdate.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="100" column="8" lean-forward="true" selection-start-line="100" selection-start-column="8" selection-end-line="100" selection-end-column="63" />
+        <state relative-caret-position="97">
+          <caret line="62" lean-forward="true" selection-start-line="62" selection-end-line="62" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#342#343#0" expanded="true" />
-            <element signature="e#374#375#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/elements/SpotLight.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="94" column="54" selection-start-line="94" selection-start-column="54" selection-end-line="94" selection-end-column="54" />
+        <state relative-caret-position="493">
+          <caret line="49" column="17" selection-start-line="49" selection-start-column="17" selection-end-line="49" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basicRenderTest.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/unittests/TestRenderer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="22" column="32" lean-forward="true" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/elements/PointLight.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="349">
+          <caret line="112" column="20" selection-start-line="112" selection-start-column="20" selection-end-line="112" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2601#2602#0" expanded="true" />
+            <element signature="e#2629#2630#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/elements/DirectionalLight.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="84" column="20" selection-start-line="84" selection-start-column="20" selection-end-line="84" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1561#1562#0" expanded="true" />
+            <element signature="e#1595#1596#0" expanded="true" />
+            <element signature="e#1724#1725#0" expanded="true" />
+            <element signature="e#1763#1764#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/elements/LightSource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/geometries/Geometry.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1266">
+          <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/geometries/Intersectable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-110">
+          <caret line="15" column="20" lean-forward="true" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/primitives/Material.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="46" column="23" selection-start-line="46" selection-start-column="23" selection-end-line="46" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/geometries/Geometries.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#544#545#0" expanded="true" />
+            <element signature="e#599#600#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scene/Scene.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="139">
+          <caret line="59" column="16" lean-forward="true" selection-start-line="59" selection-start-column="16" selection-end-line="59" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1219#1220#0" expanded="true" />
+            <element signature="e#1253#1254#0" expanded="true" />
+            <element signature="e#1623#1624#0" expanded="true" />
+            <element signature="e#1653#1654#0" expanded="true" />
+            <element signature="e#3787#3788#0" expanded="true" />
+            <element signature="e#3830#3831#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/render/Render.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="161" column="5" selection-start-line="161" selection-start-column="5" selection-end-line="161" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4340#4341#0" expanded="true" />
+            <element signature="e#4368#4369#0" expanded="true" />
           </folding>
         </state>
       </provider>

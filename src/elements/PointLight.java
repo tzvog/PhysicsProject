@@ -8,7 +8,7 @@ import java.awt.*;
 /**
  * a class to represent the point of a light
  */
-public class PointLight extends Light{
+public class PointLight extends Light implements LightSource{
 
     /* local variable declaration */
     protected Point3D _position;
@@ -105,6 +105,12 @@ public class PointLight extends Light{
         return new Color((int)(this._color.getRed() / divider),
                 (int)(this._color.getGreen() / divider),
                 (int)(this._color.getBlue() / divider));
+    }
+
+
+    @Override
+    public Vector getL(Point3D p) {
+        return null;
     }
 
     /**
